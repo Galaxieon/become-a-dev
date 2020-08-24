@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./icons/favicon.png" type="image/png" />
+        <script src="https://kit.fontawesome.com/cf89783734.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./style.css" />
         <title>GALAXIEON</title>
     </head>
@@ -13,11 +14,15 @@
                 <a href="index.html"
                     ><img src="./icons/logo.png" alt="Logo of GALAXIEON"
                 /></a>
-                <nav>
-                    <a href="#" class="active">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                </nav>
+                    <ul class="desktop">
+                        <li><a href="./index.html" class="active">Home</a></li>
+                        <li><a href="">Become A Dev</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <!-- <li><a href="#">Contact</a></li> -->
+                    </ul>
+                <div class="icon">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </header>
         <main>
@@ -25,8 +30,11 @@
                 <div class="container">
                     <div class="left-section">
                         <h1>Welcome To GALAXIEON</h1>
-                        <h2>We are Coming soon</h2>
-                        <div class="count">
+                        <h2>Learn and Become a Developer</h2>
+                        <div class="btn">
+                            <button>Click Here!!!!!</button>
+                        </div>
+                        <!-- <div class="count">
                             <div class="countd">
                                 <span id="days">00</span>
                                 DAYS
@@ -43,7 +51,7 @@
                                 <span id="seconds">00</span>
                                 SECONDS
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="right-section">
                         <img src="./icons/logo.png" alt="Logo of GALAXIEON" />
@@ -54,7 +62,8 @@
                 </footer>
             </div>
         </main>
-        <script>
+        <script src="./script.js"></script>
+        <!-- <script>
             var count = new Date("sep 25,2020 00:00:00");
             var x = setInterval(() => {
                 var now = new Date();
@@ -74,6 +83,6 @@
                     clearInterval(x);
                 }
             }, 1000);
-        </script>
+        </script> -->
     </body>
 </html>
