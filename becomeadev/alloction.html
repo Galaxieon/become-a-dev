@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Memory Allocation</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+            <ul class="desktop">
+                <li>
+                    <a href="./home.html"><i class="fas fa-home"></i></a>
+                </li>
+                <li><a href="#">Class XII</a></li>
+                <li><a href="#">Class XI</a></li>
+            </ul>
+        </div> -->
+            <!-- <nav class="nav" id="nav">
+            <ul>
+                <li>
+                    <a class="active" href="./structure.html">1.1 Structure</a>
+                </li>
+                <li><a href="#news">1.2 Pointer and Array</a></li>
+                <li><a href="#contact">1.2 Pointer</a></li>
+                <li><a href="#about">1.6 Poniter</a></li>
+            </ul>
+        </nav>
+        <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <h1>Methods of memory allocation</h1>
+            <div class="btn">
+                <a class="pre" href="./pointer.html"> Previous </a>
+                <a class="nxt" href="./opertionspointer.html">Next</a>
+            </div>
+            <div class="container">
+                <div class="intro">
+                    <p>Two types of memory allocation</p>
+                </div>
+                <div class="description">
+                    <p>
+                        The memory allocation that takes place before the
+                        execution of the program is known as
+                        <span>static memory allocation</span>. It is due to the
+                        variable declaration statements in the program. There is
+                        another kind memory allocation, called
+                        <span>dynamic memory allocation</span> , in which memory
+                        is allocated during the execution of the program. It is
+                        facilitated by an operator, named <span>new</span> . As
+                        complementary to this operator,c++ provides another
+                        operator, named <span>delete</span> to de-allocate
+                        (free)the memory.
+                    </p>
+                    <h3>Syntax for dynamic memory allocation:</h3>
+                    <div class="code">
+                        <code> pointer_variable = new data_type;</code>
+                    </div>
+                    <h3>Examples:</h3>
+                    <div class="code">
+                        <code>
+                            Ptr1 = new int; <br />
+                            Ptr2 = new float; <br />
+                            Ptr3 = new student;
+                        </code>
+                    </div>
+                    <h3>Memory leak:</h3>
+                    <p>
+                        If the memory allocated using a new operator is not free
+                        using delete,that memory is said to be an
+                        <span>orphaned memory block</span> . This memory block
+                        is allocated on each execution of the program and the
+                        size of the orphaned block is increased. Thus a part of
+                        the memory seems to disappear on every run of the
+                        program, and eventually the amount of memory consumed
+                        has an unfavorable effect. This situation is known as
+                        <span>memory leak</span> .
+                    </p>
+                    <h3>The following are the reasons for memory leak:</h3>
+                    <ul>
+                        <li>
+                            Forgetting to delete the memory that has been
+                            allocated dynamically (using new).
+                        </li>
+                        <li>
+                            Falling to execute the delete statement due to poor
+                            logic of the program code.
+                        </li>
+                    </ul>
+                    <p>
+                        <span
+                            >Remedy for memory leak is to ensure that the memory
+                            allocated through new is properly de-allocated
+                            through delete.</span
+                        >
+                    </p>
+                </div>
+            </div>
+            <div class="btn">
+                <a class="pre" href="./pointer.html"> Previous </a>
+                <a class="nxt" href="./opertionspointer.html">Next</a>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

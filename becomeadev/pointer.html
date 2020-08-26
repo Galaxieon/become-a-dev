@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>POINTERS</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+                <ul class="desktop">
+                    <li>
+                        <a href="./home.html"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li><a href="#">Class XII</a></li>
+                    <li><a href="#">Class XI</a></li>
+                </ul>
+            </div> -->
+            <!-- <nav class="nav" id="nav">
+                <ul>
+                    <li>
+                        <a class="active" href="./structure.html">1.1 Structure</a>
+                    </li>
+                    <li><a href="#news">1.2 Pointer and Array</a></li>
+                    <li><a href="#contact">1.2 Pointer</a></li>
+                    <li><a href="#about">1.6 Poniter</a></li>
+                </ul>
+            </nav>
+            <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Structures and Pointers - Pointers</h1>
+                <div class="btn">
+                    <a class="pre" href="./structure.html"> Previous </a>
+                    <a class="nxt" href="./alloction.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        Pointer is a variable that can hold the address of a
+                        memory location.
+                    </p>
+                </div>
+                <div class="description">
+                    <br /><br />
+                    <img
+                        src="./images/1.2.JPG"
+                        alt="A librarian points a book to a boy"
+                    />
+                    <p>
+                        Pointer is something like the librarian or teacher in
+                        the above example. It is a kind of reference. Consider
+                        the following C++ statement:
+                    </p>
+                    <div class="code">
+                        <code> int num=25; </code>
+                    </div>
+                    <br /><br />
+                    <img
+                        src="./images/1.3.JPG"
+                        alt="A variable storing in a memory"
+                    />
+                    <p>
+                        We know that it is a variable initialisation statement,
+                        in which <span>num</span> is a variable that is assigned
+                        with the value 25. Naturally, this statement causes
+                        memory allocation as shown in above Figure. In the
+                        figure, we can see that a variable has three attributes
+                        - its name, address and data type. Here, the name of the
+                        variable is <span>num</span> and the content
+                        <span>25</span>
+                        shows the data type.
+                    </p>
+                    <h3>Syntax to declare pointer variable:</h3>
+                    <div class="code">
+                        <code> data_type *variable; </code>
+                    </div>
+                    <h3>Examples:</h3>
+                    <div class="code">
+                        <code>
+                            int *ptr1; <br />
+                            float *ptr2; <br />
+                            struct student *ptr3;
+                        </code>
+                    </div>
+                    <p>
+                        The data type of a pointer should be the same as that of
+                        the data pointed to by it. In the above examples, ptr1
+                        can contain the address of an integer location, ptr2 can
+                        point to a location containing floating point number,
+                        and ptr3 can hold the address of location that contains
+                        student type data.
+                    </p>
+                    <p>
+                        The address of operator(&),is used to get the address of
+                        a variable. If number is an integer variable, its
+                        address can be stored in pointer ptr1 by the statement:
+                    </p>
+                    <div class="code">
+                        <code> Ptr1 = &amp;num; </code>
+                    </div>
+                    <p>
+                        The indirection or dereference operator or value at
+                        operator (*) is used only with pointers and it retrieves
+                        the value pointed to by the pointer. <br />
+                        The statement <span>cout&lt;&lt;*ptr1;</span> is
+                        equivalent to the statement
+                        <span>cout&lt;&lt;num;</span>
+                    </p>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./structure.html"> Previous </a>
+                    <a class="nxt" href="./alloction.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

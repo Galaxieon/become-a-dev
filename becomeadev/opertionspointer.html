@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Operations on Pointer</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+            <ul class="desktop">
+                <li>
+                    <a href="./home.html"><i class="fas fa-home"></i></a>
+                </li>
+                <li><a href="#">Class XII</a></li>
+                <li><a href="#">Class XI</a></li>
+            </ul>
+        </div> -->
+            <!-- <nav class="nav" id="nav">
+            <ul>
+                <li>
+                    <a class="active" href="./structure.html">1.1 Structure</a>
+                </li>
+                <li><a href="#news">1.2 Pointer and Array</a></li>
+                <li><a href="#contact">1.2 Pointer</a></li>
+                <li><a href="#about">1.6 Poniter</a></li>
+            </ul>
+        </nav>
+        <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <h1>Operations on Pointer</h1>
+            <div class="btn">
+                <a class="pre" href="./alloction.html"> Previous </a>
+                <a class="nxt" href="./pointerandarray.html">Next</a>
+            </div>
+            <div class="container">
+                <div class="description">
+                    <h3>Arithmetic operations on pointers</h3>
+                    <p>
+                        We have seen that memory address is numeric in nature.
+                        Hence some of the arithmetic operations can be performed
+                        on pointers
+                    </p>
+                    <div class="code">
+                        <code>
+                            // si_ptr is 1000 <br />
+                            // fl_ptr is 1010 <br />
+                            cout&lt;&lt;si_ptr + 1; <br />
+                            cout&lt;&lt;fl_ptr + 1;
+                        </code>
+                    </div>
+                    <h3>
+                        What will be the output? Do you think that it will be
+                        1001 and 1011?
+                    </h3>
+                    <p>
+                        Adding 1 to a pointer is not the same as adding 1 to an
+                        <span>int</span> or <span>float</span> type data. When
+                        we add 1 to a <span>short int</span> pointer, the
+                        expression returns the address of the next location of
+                        <span>short</span> int type. The cells with addresses
+                        <span>1000</span> and <span>1001</span> constitute a
+                        single storage location for an integer data of short
+                        type. Hence the address of the next addressable short
+                        integer location is <span>1002</span>. So when 1 is
+                        added to a <span>short int</span> type pointer, actually
+                        its size (i.e., 2) is to be added to the address
+                        contained in the pointer variable. Similarly, to add 1
+                        to <span>float</span> type pointer, its size (i.e., 4)
+                        is to be added to the address. So the expression
+                        <span>fl_ptr+1</span> returns <span>1014</span>. So, it
+                        is clear that the expression
+                        <span>si_ptr+5</span> returns
+                        <span>1010 (1000+5×2)</span> and
+                        <span> fl_ptr+3</span> returns
+                        <span>1022 (1010+3×4)</span>. Similarly, subtraction
+                        operation can also be performed on pointers
+                    </p>
+                    <p>
+                        The following statements illustrate various operations
+                        on pointers:
+                    </p>
+                    <div class="code">
+                        <code>
+                            int *ptr1, *ptr2; / / Declaration of two integer
+                            pointers <br />
+                            Ptr1 = new int (5) ; /* Dynamic memory allocation
+                            (let the address be 1000) and initialisation with
+                            5*/ <br />
+                            Ptr2 = ptr1 + 1; /* ptr2 will point to the very next
+                            integer location with the address 1004 */ <br />
+                            ++ptr2; / / same as ptr2 = ptr2 + 1 <br />
+                            cout&lt;&lt;ptr1; / / Displays 1000 <br />
+                            cout&lt;&lt;*ptr1; / / Displays 5 <br />
+                            cout&lt;&lt;ptr1; / / Displays 1004 <br />
+                            cin&gt;&gt;*ptr2; /* Reads an integer (say 12) and
+                            stories it in location 1004 */ <br />
+                            cout&lt;&lt;*ptr1 + 1; / / Displays 6 (5+1) <br />
+                            cout&lt;&lt;*(ptr1 + 1); / / Displays 12, the value
+                            at 1004 <br />
+                            Ptr--; / / same as ptr1 = ptr1 - 1
+                        </code>
+                    </div>
+                    <h3>Relational operations on pointers</h3>
+                    <p>
+                        Among the six relational operators, only == (equality)
+                        and != (non-equality) operators are used with pointers.
+                        Memory address is simply a unique number to identify
+                        each memory location. If p and q are two pointers, they
+                        may contain the address of the same integer location or
+                        different memory locations. This can be verified with
+                        the expressions p==q or p!=q
+                    </p>
+                </div>
+            </div>
+            <div class="btn">
+                <a class="pre" href="./alloction.html"> Previous </a>
+                <a class="nxt" href="./pointerandarray.html">Next</a>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

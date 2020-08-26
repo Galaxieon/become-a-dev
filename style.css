@@ -112,6 +112,10 @@ header .container img {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+.btn button a {
+    text-decoration: none;
+    color: rgb(3, 96, 133);
+}
 /* .count {
     margin: 40px 0;
 }

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Structure</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+                <ul class="desktop">
+                    <li>
+                        <a href="./home.html"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li><a href="#">Class XII</a></li>
+                    <li><a href="#">Class XI</a></li>
+                </ul>
+            </div> -->
+            <!-- <nav class="nav" id="nav">
+                <ul>
+                    <li>
+                        <a class="active" href="./structure.html">1.1 Structure</a>
+                    </li>
+                    <li><a href="#news">1.2 Pointer and Array</a></li>
+                    <li><a href="#contact">1.2 Pointer</a></li>
+                    <li><a href="#about">1.6 Poniter</a></li>
+                </ul>
+            </nav>
+            <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Structures and Pointers - Structure</h1>
+                <div class="btn">
+                    <a class="pre" style="visibility: hidden">
+                        Previous
+                    </a>
+                    <a class="nxt" href="./pointer.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        Structure is a user-defined data type of c++ to
+                        represent a collection of logically related data
+                        items,which may be of different types, under a common
+                        name.
+                    </p>
+                </div>
+                <div class="description">
+                    <p>
+                        Structure is a user-defined data type of c++ to
+                        represent a collection of logically related data
+                        items,which may be of different types, under a common
+                        name. We learnt array in Class XI, to refer to a
+                        collection of data of the same type. But structure can
+                        represent a group of different types of data under a
+                        common name. Let us discuss how a structure is defined
+                        in C++ and elements are referenced.
+                    </p>
+                    <h2>Structure Definition</h2>
+                    <p>
+                        While solving problems, the data to be processed may be
+                        of grouped type as mentioned above. We have to define a
+                        suitable structure to represent such grouped data. For
+                        that, first we have to identify the elementary data
+                        items that constitute the grouped data. Then we have to
+                        adopt the following syntax to define the structure.
+                    </p>
+                    <div class="code">
+                        <code>
+                            struct structure_tag ‌<br />
+                            { <br />
+                            data_type variable1;<br />
+                            data_type variable2; <br />
+                            ...................;<br />
+                            ...................; <br />
+                            data_type variableN; <br />
+                            };
+                        </code>
+                    </div>
+                    <p>
+                        In the above syntax, struct is the keyword to define a
+                        structure, structure_tag (or structure_name) is an
+                        identifier and variable1, variable2, …, variableN are
+                        identifiers to represent the data items constituting the
+                        grouped data. The identifier used as the structure tag
+                        or structure name is the new userdefined data type. It
+                        has a size like any other data types and it can be used
+                        to declare variables. This data type can also be used to
+                        specify the arguments of functions and as the return
+                        type of functions. The variables specified within the
+                        pair of braces are known as elements of the structure.
+                        The data types preceded by these elements may be basic
+                        data types or user-defined data types. These data types
+                        determine the size of the structure.
+                    </p>
+                    <h3>Example of a structure for storing Student details</h3>
+                    <div class="code">
+                        <code>
+                            struct student <br />
+                            { <br />
+                            int adm_no;<br />
+                            char name[20]; <br />
+                            char group[10]; <br />
+                            float fee; <br />
+                            };
+                        </code>
+                    </div>
+                    <p>
+                        Variables should be declared for storing the
+                        details.Variables can be initialised also. For example,
+                        the details of a student can be stored in a variable
+                        during its declaration itself as shown below:
+                    </p>
+                    <div class="code">
+                        <code>
+                            Student st = {3452," Vaishakh", "science ",270.00};
+                        </code>
+                    </div>
+                    <p>
+                        Memory space for the variable st = 38 bytes(4+20+10+4)
+                        <br />
+                        Structure tag may be omitted while defining a structure
+                        in case variable is declared as in the following
+                        example:
+                    </p>
+                    <div class="code">
+                        <code>
+                            Struct <br />
+                            { <br />
+                            int adm_no; <br />
+                            char name [20]; <br />
+                            char group [10]; <br />
+                            float fee; <br />
+                            } st;
+                        </code>
+                    </div>
+                    <p>
+                        The dot operator(.)connects a structure variable and its
+                        element using the following syntax: <br />
+                        Structure_variable.element_name <br />
+                        Examples for accessing elements of a structure:
+                    </p>
+                    <div class="code">
+                        <code>
+                            cin&gt;&gt;st.adm_no; <br />
+                            cin.getline (st.name,20); <br />
+                            St.free= 2500; <br />
+                            cout&lt;&lt;st.group;
+                        </code>
+                    </div>
+                    <p>
+                        If two different structures contain the same
+                        elements,their variables cannot be assigned. Consider
+                        two structures test_1 and test_2.
+                    </p>
+                    <div class="code">
+                        <code>
+                            Struct test_1 <br />
+                            { <br />
+                            int a; <br />
+                            float b; <br />
+                            }t1={3,2.5}; <br /><br />
+                            Struct test_2 <br />
+                            { <br />
+                            int a; <br />
+                            float b; <br />
+                            }t2;
+                        </code>
+                    </div>
+                    <p>
+                        The assignment <span>t2=t1;</span> is invalid.But
+                        <span>t2.a=t1.b;</span> are valid. <br />
+                        If an element of a structure is a variable of another
+                        structure,it is called nested structure.
+                    </p>
+                    <h3>The following is an example:</h3>
+                    <table>
+                        <tr>
+                            <th>Definition A</th>
+                            <th>Definition B</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                struct date <br />
+                                { <br />
+                                Short day; <br />
+                                Short month; <br />
+                                Short year; <br />
+                                }; <br />
+                                struct student <br />
+                                { <br />
+                                into adm_no; <br />
+                                char name [20]; <br />
+                                date dt_adm; <br />
+                                float fee; <br />
+                                };
+                            </td>
+                            <td>
+                                Struct student <br />
+                                { <br />
+                                int adm_no; <br />
+                                char name [20];<br />
+                                struct date <br />
+                                { <br />
+                                Short day; <br />
+                                short month; <br />
+                                Short year; <br />
+                                } dt_adm; <br />
+                                float fee; <br />
+                                };
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>
+                        Elements of nested structure are accessed as follows:
+                    </h3>
+                    <div class="code">
+                        <code>
+                            student st; <br />
+                            cin&gt;&gt;st.dt_adm.day <br />
+                            &gt;&gt;st.dt_adm.month <br />
+                            &gt;&gt;st.dt_adm.year;
+                        </code>
+                    </div>
+                    <h3>Array v/s Structure</h3>
+                    <table>
+                        <tr>
+                            <th>Array</th>
+                            <th>Structure</th>
+                        </tr>
+                        <tr>
+                            <td>It is a derived data type.</td>
+                            <td>It is a user defined data type.</td>
+                        </tr>
+                        <tr>
+                            <td>A collection of the same type of data.</td>
+                            <td>A collection of different types of data.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Elements of an array are referenced using the
+                                corresponding subscripts.
+                            </td>
+                            <td>
+                                Elements of a structure are referenced using dot
+                                operator(.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                When an element of an array becomes another
+                                array, a multidimensional array is formed.
+                            </td>
+                            <td>
+                                When an element of a structure becomes another
+                                structure,a nested structure is formed.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Arrays of structure are possible.</td>
+                            <td>Structure can contain arrays as elements.</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn">
+                    <a class="pre" style="visibility: hidden">
+                        Previous
+                    </a>
+                    <a class="nxt" href="./pointer.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
