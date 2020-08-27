@@ -90,6 +90,11 @@ button:hover {
         display: block;
     }
 }
+@media screen and (max-width: 450px) {
+    .cls {
+        max-width: 300px;
+    }
+} 
 @media screen and (max-width: 375px) {
     .cls {
         max-width: 350px;
