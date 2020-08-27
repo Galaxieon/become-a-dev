@@ -53,12 +53,101 @@
                 <h1>Pointer and Array</h1>
                 <div class="btn">
                     <a class="pre" href="./opertionspointer.html"> Previous </a>
-                    <a class="nxt" href="./pointerandstructure.html">Next</a>
+                    <a class="nxt" href="./pointerandstring.html">Next</a>
                 </div>
-
+                <img
+                    src="./images/1.4.JPG"
+                    alt="memory allocation of an array"
+                />
+                <div class="description">
+                    <p>
+                        We learnt that an array can contain a collection of
+                        homogeneous type of data under a common name. This data
+                        is stored in contiguous memory locations. Figure 1.9
+                        shows the memory allocation of an array
+                        <span>ar[10]</span> of <span>int</span> type with 10
+                        numbers. It is assumed that the array begins at location
+                        1000 and each location consists of 4 bytes (as per GCC).
+                        We know that any element of this array can be referenced
+                        by specifying the subscript along with the array name.
+                        For example,
+                        <span
+                            >ar[0] returns 34, ar[1] returns 12, and at last
+                            ar[9] returns 19.</span
+                        >
+                    </p>
+                    <h3>
+                        If ptr is an integer pointer, the address of the first
+                        location of array ar[10] can be stored in it with the
+                        following statement:
+                    </h3>
+                    <div class="code">
+                        <code> ptr = &amp;ar[0]; </code>
+                    </div>
+                    <h3>
+                        Now let us see the output of the expressions used in the
+                        following statements
+                    </h3>
+                    <div class="code">
+                        <code>
+                            cout&lt;&lt;ptr; //Displays 1000, the address of
+                            ar[0] <br />
+                            cout&lt;&lt;*ptr; //Displays 34, the value of ar[0]
+                            <br />
+                            cout&lt;&lt;(ptr+1); //Displays 1004, the address of
+                            ar[1] <br />
+                            cout&lt;&lt;*(ptr+1); //Displays 12, the value of
+                            ar[1] <br />
+                            cout&lt;&lt;(ptr+9); //Displays 1036, the address of
+                            ar[9] <br />
+                            cout&lt;&lt;*(ptr+9); //Displays 19, the value of
+                            ar[9] <br />
+                        </code>
+                    </div>
+                    <h3>Can you predict the output of the statement:</h3>
+                    <div class="code">
+                        <code> cout&lt;&lt;ar; </code>
+                    </div>
+                    <p>
+                        The output will be <span>1000</span>, which is the
+                        address of the first location of the array. This address
+                        is known as <span>base address of the array</span>. We
+                        have seen that a variable that contains the address of a
+                        memory location is called pointer. In that sense,
+                        arrayname ar can be considered as a pointer. So the
+                        following statements are also valid:
+                    </p>
+                    <div class="code">
+                        <code>
+                            cout&lt;&lt;ar; //Displays 1000, the address of
+                            ar[0] <br />
+                            ptr=ar; //same as ptr=&ar[0]; <br />
+                            cout&lt;&lt;*ar; //Displays 34, and is same as
+                            cout&lt;&lt;ar[0]; <br />
+                            cout&lt;&lt;(ar+1); //Displays 1004, the address of
+                            ar[1]; <br />
+                            cout&lt;&lt;*(ar+1); //Displays 34, and is same as
+                            cout&lt;&lt;ar[1]; <br />
+                        </code>
+                    </div>
+                    <h2>Dynamic Array</h2>
+                    <p>
+                        Dynamic array is a collection of memory locations
+                        created during run time using the
+                        <span>dynamic memory allocation operator new.</span>
+                    </p>
+                    <h3>The syntax is:</h3>
+                    <div class="code">
+                        <code> pointer = new data_type [size]; </code>
+                    </div>
+                    <p>
+                        Here,the size can be a constant, a variable or an
+                        integer expression.
+                    </p>
+                </div>
                 <div class="btn">
                     <a class="pre" href="./opertionspointer.html"> Previous </a>
-                    <a class="nxt" href="./pointerandstructure.html">Next</a>
+                    <a class="nxt" href="./pointerandstring.html">Next</a>
                 </div>
             </div>
         </main>

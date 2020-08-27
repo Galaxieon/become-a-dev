@@ -8,6 +8,7 @@ function showLess() {
     document.getElementById("more").style.display = "none";
     document.getElementById("less-btn").style.display = "none";
     document.getElementById("more-btn").style.display = "block";
+    document.getElementById("alert").style.display = "none";
 }
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () {

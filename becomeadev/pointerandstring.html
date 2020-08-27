@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Pointer and String</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+            <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+        <ul class="desktop">
+            <li>
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li><a href="#">Class XII</a></li>
+            <li><a href="#">Class XI</a></li>
+        </ul>
+    </div> -->
+            <!-- <nav class="nav" id="nav">
+        <ul>
+            <li>
+                <a class="active" href="./structure.html">1.1 Structure</a>
+            </li>
+            <li><a href="#news">1.2 Pointer and Array</a></li>
+            <li><a href="#contact">1.2 Pointer</a></li>
+            <li><a href="#about">1.6 Poniter</a></li>
+        </ul>
+    </nav>
+    <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Pointer and String</h1>
+                <div class="btn">
+                    <a class="pre" href="./pointerandarray.html"> Previous </a>
+                    <a class="nxt" href="./pointerandstructure.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        In Class XI, we learnt that string data can be
+                        referenced by character array and the array-name can be
+                        considered as string variable. In the previous section,
+                        we saw that array-name contains the base address of the
+                        array, and hence it can be considered as a pointer. Let
+                        us discuss how these two aspects are combined to refer
+                        to strings using pointer.
+                    </p>
+                </div>
+                <div class="description">
+                    <h3>
+                        The following statements illustrate how character
+                        pointer differs from the other pointers:
+                    </h3>
+                    <div class="code">
+                        <code>
+                            char str[20]; //character array declaration <br />
+                            char *sp; //character pointer declaration <br />
+                            cin&gt;&gt;str; //To input a string, say "Program"
+                            <br />
+                            cout&lt;&lt;str; //Displays the string "Program"
+                            <br />
+                            sp=str; //Content of str is copied into the pointer
+                            sp <br />
+                            cout&lt;&lt;sp; //Displays the string "Program"
+                            <br />
+                            cout&lt;&lt;&str[0]; //Displays the string "Program"
+                            <br />
+                            cout&lt;&lt;sp+1; //Displays the string "rogram"
+                            <br />
+                            cout&lt;&lt;&str+1; //Displays the string "rogram"
+                            <br />
+                            // The two statements given above display the
+                            substring starting from 2nd character onwards <br />
+                            cout&lt;&lt;str[0]; //Displays the character 'P'
+                            <br />
+                            cout&lt;&lt;*sp; //Displays the character 'P' <br />
+                            cout&lt;&lt;&amp;str; //Displays the base address of
+                            the array str <br />
+                            cout&lt;&lt;&amp;sp; //Displays the address of the
+                            pointer sp <br />
+                        </code>
+                    </div>
+                    <h2>Advantages of character pointer</h2>
+                    <h3>
+                        The use of character pointer for storing string offers
+                        the following advantages over character array:
+                    </h3>
+                    <ul>
+                        <li>
+                            Since there is no size specification, a string of
+                            any number of characters can be stored. There is no
+                            wastage or insufficiency of memory space. But it
+                            should be done with initialization. (e.g., char *str
+                            = "Program";)
+                        </li>
+                        <li>
+                            Assignment operator (=) can be used to copy strings.
+                        </li>
+                        <li>
+                            Any character in the string can be referenced using
+                            the concept of pointer arithmetic which makes access
+                            faster.
+                        </li>
+                        <li>
+                            Array of strings can be managed with optimal use of
+                            memory space.
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./pointerandarray.html"> Previous </a>
+                    <a class="nxt" href="./pointerandstructure.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
