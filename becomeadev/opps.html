@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>OPPs</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+    <ul class="desktop">
+        <li>
+            <a href="./home.html"><i class="fas fa-home"></i></a>
+        </li>
+        <li><a href="#">Class XII</a></li>
+        <li><a href="#">Class XI</a></li>
+    </ul>
+    </div> -->
+            <!-- <nav class="nav" id="nav">
+    <ul>
+        <li>
+            <a class="active" href="./structure.html">1.1 Structure</a>
+        </li>
+        <li><a href="#news">1.2 Pointer and Array</a></li>
+        <li><a href="#contact">1.2 Pointer</a></li>
+        <li><a href="#about">1.6 Poniter</a></li>
+    </ul>
+</nav>
+<div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Basic concepts of OOP</h1>
+                <div class="btn">
+                    <a class="pre" href="./paradigm.html"> Previous </a>
+                    <a class="nxt" href="./home.html">Go to Home</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        Object Oriented Programming simplifies the software
+                        development and maintenance by providing some concepts
+                        such as objects, classes, data abstraction, data
+                        encapsulation, modularity, inheritance, polymorphism.
+                        Let us discuss these concepts in detail.
+                    </p>
+                </div>
+                <div class="description">
+                    <h2>Classes and objects</h2>
+                    <p>
+                        A <span>class</span> is a prototype/ blueprint that
+                        defines data and functions common to all objects of a
+                        particular type. <span>Object</span> is an instance of a
+                        class with a unique set of data and functions as
+                        members. <span>Class</span> is an
+                        <span>abstract data type</span> and
+                        <span>objects</span> are <span>variables</span> declared
+                        using a class. <span>Student is a class</span> with
+                        admission number, name and fee as data members.
+                        <span>Anil may be an object </span> of this class with
+                        values 1203, "Anil Kumar" , and 2000 for these data
+                        members. Setting these values to these data members is a
+                        function.
+                    </p>
+                    <h4>
+                        Bird is a class and Parrot is an object. Fruit is a
+                        class and Apple is an object. Complex Number is a class
+                        and 5+i2 is an object.
+                    </h4>
+                    <h3>Class v/s Structure</h3>
+                    <table>
+                        <tr>
+                            <th>Class</th>
+                            <th>Structure</th>
+                        </tr>
+                        <tr>
+                            <td>Contains data and functions as members</td>
+                            <td>Contains only data as members</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Access specifiers private, public <br />
+                                and protected are used for members
+                            </td>
+                            <td>No access specifiers are used</td>
+                        </tr>
+                        <tr>
+                            <td>By default, the members are private</td>
+                            <td>By default, the members are public</td>
+                        </tr>
+                    </table>
+                    <h2>Basic concepts of OOPs</h2>
+                    <dl>
+                        <dt><h4>Data abstraction:</h4></dt>
+                        <dd>
+                            It refers to showing only the essential features of
+                            the application and hiding the details from the
+                            outside world.
+                        </dd>
+                        <dt><h4>Data encapsulation:</h4></dt>
+                        <dd>
+                            It binds the data and functions together and keeps
+                            them safe.
+                        </dd>
+                        <dt><h4>Polymorphism:</h4></dt>
+                        <dd>
+                            The ability to process objects differently depending
+                            on their data type or class.
+                        </dd>
+                        <dt><h4>Inheritance:</h4></dt>
+                        <dd>
+                            It is the process by which objects of one class
+                            acquire the properties and behaviour of another
+                            class.
+                        </dd>
+                        <dt><h4>Modularity:</h4></dt>
+                        <dd>
+                            A concept through which a program is partitioned
+                            into small segments called modules.
+                        </dd>
+                    </dl>
+                    <h3>Types of Polymorphism:</h3>
+                    <dl>
+                        <dt>
+                            <h4>
+                                Compile time (Static) polymorphism (or early
+                                binding):
+                            </h4>
+                        </dt>
+                        <dd>
+                            Polymorphism during and compilation. Function
+                            overloading and operator overloading are examples.
+                        </dd>
+                        <dt>
+                            <h4>
+                                Run time (Dynamic) polymorphism (or late
+                                binding):
+                            </h4>
+                        </dt>
+                        <dd>
+                            Polymorphism during run-time. It uses pointers.
+                            Virtual functions are examples.
+                        </dd>
+                        <dt><h4>Function Overloading:</h4></dt>
+                        <dd>
+                            Functions with the same name, but different
+                            signatures can act differently. Eg: The function
+                            prototypes int area (int, int); and int area(int);
+                            show that area() is an overloaded function.
+                        </dd>
+                        <dt><h4>Operator overloading:</h4></dt>
+                        <dd>
+                            It is the process of giving new meaning to an
+                            existing C++ operator.
+                        </dd>
+                    </dl>
+                    <img
+                        src="./images/2.1.JPG"
+                        alt="Different types of Inheritance"
+                    />
+                    <p>
+                        The <span>class</span> from which properties are derived
+                        is known as <span>Base class.</span> The
+                        <span>class</span> to which the properties are derived
+                        is known as <span>derived class or subclass</span>.
+                    </p>
+                    <h3>
+                        Eg: vehicle is a base class and Automobiles is a derived
+                        class.
+                    </h3>
+                    <h2>
+                        Hoorayy!!!!!! You Completed The First Chapter.......
+                        <br />
+                        Go head and Learn more and BECOME A DEV
+                    </h2>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./paradigm.html"> Previous </a>
+                    <a class="nxt" href="./home.html">Go to Home</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
