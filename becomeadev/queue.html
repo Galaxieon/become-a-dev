@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Queue and its Operations</title>
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Stack and its Operations</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+    <ul class="desktop">
+        <li>
+            <a href="./home.html"><i class="fas fa-home"></i></a>
+        </li>
+        <li><a href="#">Class XII</a></li>
+        <li><a href="#">Class XI</a></li>
+    </ul>
+</div> -->
+            <!-- <nav class="nav" id="nav">
+    <ul>
+        <li>
+            <a class="active" href="./structure.html">1.1 Structure</a>
+        </li>
+        <li><a href="#news">1.2 Pointer and Array</a></li>
+        <li><a href="#contact">1.2 Pointer</a></li>
+        <li><a href="#about">1.6 Poniter</a></li>
+    </ul>
+</nav>
+<div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Queue and its Operations</h1>
+                <div class="btn">
+                    <a class="pre" href="./stack.html"> Previous </a>
+                    <a class="nxt" href="./linkedlist.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        Queue is a data structure that follows the FIFO (First
+                        in First out) principle. A queue has two endpoints -
+                        Front and Rear. Insertion of a data item will be at the
+                        rear end and deletion will be at the front end
+                    </p>
+                </div>
+                <div class="description">
+                    <p>
+                        <span>Insertion</span> is the
+                        <span>process of adding a new item</span> into a queue
+                        at the <span>rear end</span>. One the value of Rear
+                        equals the last position and if we attempt an insertion,
+                        <span>queue overflow occurs</span>.
+                        <span>Deletion</span> is the process of removing the
+                        item at the <span>front end</span> of a queue. If we
+                        attempt a deletion from an empty queue,
+                        <span>underflow occurs.</span>
+                    </p>
+                    <h2>Algorithm for insertion</h2>
+                    <div class="code">
+                        <code>
+                            Assume that Q[N] is an array of queue with size N
+                            and FRONT and REAR denote the front and rear
+                            positions of the queue. Let VAL contain the data to
+                            be added into the queue. <br />
+                            <br />
+                            Start <br />
+                            1: If (REAR == -1) Then //Empty status checking
+                            <br />
+                            2: FRONT = REAR = 0 <br />
+                            3: Q [REAR] = VAL <br />
+                            4: Else if (REAR &lt; N -1) Then //Space
+                            availability checking <br />
+                            5: REAR = REAR + 1 <br />
+                            6: Q [REAR] = VAL <br />
+                            7: Else <br />
+                            8: Print "Queue Overflow" <br />
+                            9: End of if <br />
+                            Stop
+                        </code>
+                    </div>
+                    <h2>Algorithm for Deletion</h2>
+                    <div class="code">
+                        <code>
+                            Assume that Q[N] is an array of queue with size N
+                            and FRONT and REAR denote the front and rear
+                            positions of the queue. Let VAL be a variable to
+                            store the deleted data.
+                            <br />
+                            <br />
+                            Start <br />
+                            1: If (FRONT &gt; -1) Then // Empty status checking
+                            <br />
+                            2: VAL = Q[FRONT] <br />
+                            3: FRONT = FRONT + 1 <br />
+                            4: Else <br />
+                            5: Print "Queue Underflow" <br />
+                            6: End of if <br />
+                            7: If (FRONT > REAR) Then // Checking the deletion
+                            of last element <br />
+                            8: FRONT = REAR = -1 <br />
+                            9: End of if <br />
+                            Stop
+                        </code>
+                    </div>
+                    <h2>Circular queue</h2>
+                    <p>
+                        It is a <span>queue</span> in which the
+                        <span>two end points meet</span>. Its
+                        <span>advantage</span> over a
+                        <span>linear queue</span> is that
+                        <span>space utilization</span> is the
+                        <span>maximum</span>. <span>Overflow</span> occurs only
+                        if <span>all the locations are filled</span> with data
+                        items.
+                    </p>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./stack.html"> Previous </a>
+                    <a class="nxt" href="./linkedlist.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

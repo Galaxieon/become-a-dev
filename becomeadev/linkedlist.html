@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Linked list and its Operations</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+    <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+<ul class="desktop">
+    <li>
+        <a href="./home.html"><i class="fas fa-home"></i></a>
+    </li>
+    <li><a href="#">Class XII</a></li>
+    <li><a href="#">Class XI</a></li>
+</ul>
+</div> -->
+            <!-- <nav class="nav" id="nav">
+<ul>
+    <li>
+        <a class="active" href="./structure.html">1.1 Structure</a>
+    </li>
+    <li><a href="#news">1.2 Pointer and Array</a></li>
+    <li><a href="#contact">1.2 Pointer</a></li>
+    <li><a href="#about">1.6 Poniter</a></li>
+</ul>
+</nav>
+<div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Linked List and its Operations</h1>
+                <div class="btn">
+                    <a class="pre" href="./stack.html"> Previous </a>
+                    <a class="nxt" href="./home.html">Go to Home</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        Linked list is a collection of nodes, where each mode
+                        consists of two parts - a data and a link.
+                    </p>
+                </div>
+                <div class="description">
+                    <p>
+                        <span>Linked list</span> is a
+                        <span>collection of nodes</span>, where each node
+                        consists of <span>two parts</span> - a
+                        <span>data and a link</span>. Link is a pointer to the
+                        next node in the list. The <span>address</span> of the
+                        <span>first node</span> is stored in a
+                        <span>special pointer</span> called <span>START</span>.
+                        <span>Linked list</span> is a <span>dynamic</span> data
+                        structure. Memory is allocated during run time. So there
+                        is <span>no problem</span> of <span>overflow</span>. It
+                        <span>grows</span> as and when
+                        <span>new data</span> items are <span>added</span>, and
+                        <span>shrinks</span> whenever <span>any data</span> is
+                        <span>removed</span>. <span>Linked list</span> is
+                        created with the help of
+                        <span>self referential structures</span>.
+                    </p>
+                    <h2>Creation of a Linked List</h2>
+                    <div class="code">
+                        <code>
+                            Step 1: Create a node and obtain its address. <br />
+                            Step 2: store data and NULL in the node. <br />
+                            Step 3: If it is the first node, store its address
+                            in START. <br />
+                            Step 4: If it is not the first node, store its
+                            address in the link part of the previous node.
+                            <br />
+                            Step 5: Repeat the steps 1 to 4 as long as the user
+                            wants.
+                        </code>
+                    </div>
+                    <h2>Traversing a linked list</h2>
+                    <div class="code">
+                        <code>
+                            Step 1: Get the address of the first node from START
+                            and store it in Temp. <br />
+                            Step 2: Using the address in Temp, get the data of
+                            the first node and store in val. <br />
+                            Step 3: Also get the content of the link part of
+                            this node (i.e., the address of the next node) and
+                            store it in Temp. <br />
+                            Step 4: If the content of Temp is not NULL, go to
+                            step 2; otherwise stop.
+                        </code>
+                    </div>
+                    <h2>Insertion in a linked list</h2>
+                    <div class="code">
+                        <code>
+                            Step 1: Create a node and store its address in
+                            <Temp class="br"></Temp> Step 2: Store the data and
+                            link part of this node using Temp. <br />
+                            Step 3: Obtain the addresses of the nodes at
+                            positions (POS-1) and POS in the pointers PreNode
+                            and PostNode respectively, with the help of a
+                            traversal operation. <br />
+                            Step 4: Copy the content of Temp (address of the new
+                            node) into the link part of node at position
+                            (PQS-1), which can be accessed using PreNode. <br />
+                            Step 5: Copy the content of PostNode (address of the
+                            node at position POS) into the link part of the new
+                            node that is pointed to by Temp.
+                        </code>
+                    </div>
+                    <h2>Deletion in a linked list</h2>
+                    <div class="code">
+                        <code>
+                            Step 1: Obtain the addresses of the nodes at
+                            positions (POS-1) and (POS+1) in the pointers
+                            PreNode and PostNode respectively, with the help of
+                            a traversal operation. <br />
+                            Step 2: Copy the content of PostNode (address of the
+                            node at position POS+1) into the link part of the
+                            node at position (POS-1), which can be accessed
+                            using PreNode. <br />
+                            Step 3: Free the node at position POS.
+                        </code>
+                    </div>
+                    <h2>
+                        Hoorayy!!!!!! You Completed The Third Chapter.......
+                        <br />
+                        Go head and Learn more and BECOME A DEV
+                    </h2>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./stack.html"> Previous </a>
+                    <a class="nxt" href="./home.html">Go to home</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social"
+                ><i id="insta" class="fab fa-instagram"></i
+            ></span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

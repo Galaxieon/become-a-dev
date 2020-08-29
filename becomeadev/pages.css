@@ -178,20 +178,25 @@ footer span {
         font-size: 15px;
     }
     .description p {
-        font-size: 12px;
-        line-height: 24px;
+        font-size: 15px;
+        line-height: 30px;
     }
     code {
-        font-size: 11px;
+        font-size: 14px;
     }
     .btn a {
-        width: 100px;
-        height: 25px;
+        width: 125px;
+        height: 30px;
         font-size: 15px;
-        padding: 0;
+        padding: 4px;
     }
     footer span {
         font-size: 25px;
+    }
+    #insta {
+        height: 25px;
+        width: 30px;
+        border-radius: 50%;
     }
 }
 @media screen and (max-width: 375px) {
