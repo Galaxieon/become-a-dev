@@ -52,7 +52,7 @@ main {
     overflow: auto;
 }
 main .container h1 {
-    text-align-last: center;
+    text-align: center;
 }
 .btn {
     display: flex;
