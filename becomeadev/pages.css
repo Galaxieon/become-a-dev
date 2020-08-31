@@ -5,6 +5,7 @@
 }
 body {
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .nav ul {
@@ -51,7 +52,7 @@ main {
     height: 100%;
     overflow: auto;
 }
-main .container h1 {
+h1 {
     text-align: center;
 }
 .btn {
@@ -60,7 +61,6 @@ main .container h1 {
     margin: 25px 0;
 }
 .btn a {
-    right: 0;
     width: 150px;
     text-align: center;
     padding: 12px;
@@ -132,10 +132,14 @@ footer span {
     font-size: 50px;
     margin-right: 25px;
 }
+footer span a {
+    text-decoration: none;
+    color: inherit;
+}
 #insta {
     height: 50px;
-    width: 60px;
-    border-radius: 50%;
+    width: 50px;
+    border-radius: 10px;
 }
 #fb:hover {
     color: #4267b2;
@@ -195,8 +199,8 @@ footer span {
     }
     #insta {
         height: 25px;
-        width: 30px;
-        border-radius: 50%;
+        width: 28px;
+        border-radius: 10px;
     }
 }
 @media screen and (max-width: 375px) {

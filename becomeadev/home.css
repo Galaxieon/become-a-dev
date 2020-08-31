@@ -32,6 +32,7 @@ main {
 .cls .container {
     /* transform: translatex(50%); */
     /* max-width: 700px; */
+    padding: 20px;
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
@@ -39,11 +40,29 @@ main {
     background-color: rgb(85, 85, 85);
 }
 .cls .container h1 {
+    font-size: 25px;
     color: #fff;
 }
 .cls .container h2 {
     background-color: #302e2e;
     color: #fff;
+}
+.button {
+    text-decoration: none;
+    width: 200px;
+    padding: 10px;
+    margin: none;
+    font-size: 15px;
+    color: rgb(3, 96, 133);
+    background-color: rgb(255, 255, 255, 0.719);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.button:hover {
+    background-color: #fff;
+    transition: background-color 0.25s ease-in-out;
+    cursor: pointer;
 }
 table {
     width: 100%;
@@ -55,6 +74,9 @@ td a {
     color: rgba(255, 255, 255, 0.788);
     text-decoration: none;
     text-transform: capitalize;
+}
+td a:hover {
+    color: rgb(255, 255, 255);
 }
 button {
     padding: 10px;
