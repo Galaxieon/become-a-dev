@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <link rel="stylesheet" href="./qna.css" />
+        <title>Exercise - Structure</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./exercises.html"><i class="fas fa-home"></i></a>
+                <a href="./home.html">CLASSES</a>
+                <a href="./exercises.html">EXERCISES </a>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <h1>Exercise -Structure</h1>
+                <div class="qna">
+                    <div class="q">
+                        <h3>Fill The Blank :</h3>
+                        <p>
+                            Represent a structure named student with attributes
+                            of Admission no, Name with 20 characters and Group
+                            with 20 characters and Fees.
+                        </p>
+                    </div>
+                    <p>
+                        <input type="text" id="a1" autocomplete="off" /> student
+                        <br />
+                        { <br />
+                        <input
+                            type="text"
+                            id="a2"
+                            autocomplete="off"
+                            required
+                        />
+                        admno ; <br />
+                        <input
+                            type="text"
+                            id="a3"
+                            autocomplete="off"
+                            required
+                        />
+                        name
+                        <input
+                            type="text"
+                            id="a4"
+                            autocomplete="off"
+                            required
+                        />; <br />
+                        <input
+                            type="text"
+                            id="a5"
+                            autocomplete="off"
+                            required
+                        />
+                        group
+                        <input
+                            type="text"
+                            id="a6"
+                            autocomplete="off"
+                            required
+                        />
+                        ; <br />
+                        <input
+                            type="text"
+                            id="a7"
+                            autocomplete="off"
+                            required
+                        />
+                        fees; <br />
+                        }; <br />
+                    </p>
+                    <div class="crt" id="crt">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit" onclick="checkAns1()">
+                            Submit
+                        </button>
+                        <button id="ans" onclick="showAns1()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset" onclick="reset1()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div class="qna">
+                    <div class="q">
+                        <h3>Consider the given structure definition</h3>
+                        <p>
+                            struct complex <br />
+                            { <br />
+                            int real; <br />
+                            int image; <br />
+                            };
+                        </p>
+                    </div>
+                    <h4>
+                        Write a C++ statement to create a structure variable
+                        named c1
+                    </h4>
+                    <input type="text" id="b1" />
+                    <h4>
+                        Write a C++ statement to store the value 15 to the
+                        structure member real
+                    </h4>
+                    <input type="text" id="b2" />
+                    <div class="crt" id="crt1">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng1">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit1" onclick="checkAns2()">
+                            Submit
+                        </button>
+                        <button id="ans1" onclick="showAns2()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset1" onclick="reset2()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="qna">
+                    <div class="q">
+                        <h3>Compare array and structure in C++.</h3>
+                        <p>
+                            NB: First letter of all answer must be capital other
+                            are small letter
+                        </p>
+                    </div>
+                    <br />
+                    <table>
+                        <tr>
+                            <th>Array</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="c1" /><i
+                                    id="c11"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="c21" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="c2" /><i
+                                    id="c12"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="c22" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="c3" /><i
+                                    id="c13"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="c23" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Structure</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="c4" /><i
+                                    id="c14"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="c24" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="c5" /><i
+                                    id="c15"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="c25" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="c6" />
+                                <i id="c16" class="fas fa-check-circle"></i>
+                                <i id="c26" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="crt" id="crt2">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng2">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit2" onclick="checkAns3()">
+                            Submit
+                        </button>
+                        <button id="ans2" onclick="showAns3()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset2" onclick="reset3()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="qna">
+                    <div class="q">
+                        <h3>Write a statement for inputting Admission no</h3>
+                        <p>
+                            Struct <br />
+                            { <br />
+                            int adm_no;<br />
+                            char name [20];<br />
+                            char group [10];<br />
+                            float fee; <br />
+                            } st; <br />
+                        </p>
+                    </div>
+                    <p>
+                        <input type="text" id="d1" />
+                    </p>
+                    <div class="crt" id="crt3">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng3">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit3" onclick="checkAns4()">
+                            Submit
+                        </button>
+                        <button id="ans3" onclick="showAns4()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset3" onclick="reset4()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="qna">
+                    <div class="q">
+                        <h3>Predict The output</h3>
+                        <p>
+                            // si_ptr is 1000 <br />
+                            // fl_ptr is 1010 <br />
+                            cout&lt;&lt;si_ptr + 1; <br />
+                            cout&lt;&lt;fl_ptr + 1;
+                        </p>
+                    </div>
+                    cout&lt;&lt;si_ptr + 1;
+                    <input type="text" id="e1" />
+                    cout&lt;&lt;fl_ptr + 1;
+                    <input type="text" id="e2" />
+                    <div class="crt" id="crt4">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng4">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit4" onclick="checkAns5()">
+                            Submit
+                        </button>
+                        <button id="ans4" onclick="showAns5()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset4" onclick="reset5()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="qna">
+                    <div class="q">
+                        <h3>Predict The Output</h3>
+                        <img src="./images/1.4.JPG" alt="array" />
+                    </div>
+                    <p>
+                        ptr = &ar[0]; <br />
+                        cout&lt;&lt;ptr;
+                        <input type="text" id="f1" />
+                        <i id="f11" class="fas fa-check-circle"></i>
+                        <i id="f21" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;*ptr;
+                        <input type="text" id="f2" />
+                        <i id="f12" class="fas fa-check-circle"></i>
+                        <i id="f22" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;(ptr+1);
+                        <input type="text" id="f3" />
+                        <i id="f13" class="fas fa-check-circle"></i>
+                        <i id="f23" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;*(ptr+1);
+                        <input type="text" id="f4" />
+                        <i id="f14" class="fas fa-check-circle"></i>
+                        <i id="f24" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;(ptr+9);
+                        <input type="text" id="f5" />
+                        <i id="f15" class="fas fa-check-circle"></i>
+                        <i id="f25" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;*(ptr+9);
+                        <input type="text" id="f6" />
+                        <i id="f16" class="fas fa-check-circle"></i>
+                        <i id="f26" class="fas fa-times-circle"></i> <br />
+                    </p>
+                    <div class="crt" id="crt5">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng5">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit5" onclick="checkAns6()">
+                            Submit
+                        </button>
+                        <button id="ans5" onclick="showAns6()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset5" onclick="reset6()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="qna">
+                    <div class="q">
+                        <h3>Predict The Output</h3>
+                    </div>
+                    <p>
+                        char str[20]; //character array declaration <br />
+                        char *sp; //character pointer declaration <br />
+                        cin&gt;&gt;str; //To input a string, say "Program"<br />
+                        cout&lt;&lt;str;
+                        <input type="text" id="g1" />
+                        <i id="g11" class="fas fa-check-circle"></i>
+                        <i id="g21" class="fas fa-times-circle"></i> <br />
+                        sp=str;<br />
+                        cout&lt;&lt;sp;
+                        <input type="text" id="g2" />
+                        <i id="g12" class="fas fa-check-circle"></i>
+                        <i id="g22" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;&str[0];
+                        <input type="text" id="g3" />
+                        <i id="g13" class="fas fa-check-circle"></i>
+                        <i id="g23" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;sp+1; 
+                        <input type="text" id="g4" />
+                        <i id="g14" class="fas fa-check-circle"></i>
+                        <i id="g24" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;&str+1; 
+                        <input type="text" id="g5" />
+                        <i id="g15" class="fas fa-check-circle"></i>
+                        <i id="g25" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;str[0];
+                        <input type="text" id="g6" />
+                        <i id="g16" class="fas fa-check-circle"></i>
+                        <i id="g26" class="fas fa-times-circle"></i> <br />
+                        cout&lt;&lt;*sp;
+                        <input type="text" id="g7" />
+                        <i id="g17" class="fas fa-check-circle"></i>
+                        <i id="g27" class="fas fa-times-circle"></i> <br />
+                    </p>
+                    <div class="crt" id="crt6">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng6">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit6" onclick="checkAns7()">
+                            Submit
+                        </button>
+                        <button id="ans6" onclick="showAns7()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset6" onclick="reset7()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a class="pre" style="visibility: hidden"> Previous </a>
+                    <a class="nxt" href="./home.html">Go to Class</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+        <script src="./structureqna.js"></script>
+    </body>
+</html>

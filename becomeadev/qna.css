@@ -1,0 +1,101 @@
+.qna {
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+.q {
+    padding: 10px;
+    background-color: #00b3ff86;
+    border-top: 3px solid #00b3ff;
+    border-bottom: 3px solid #00b3ff;
+}
+input {
+    margin: 10px;
+}
+#a1 {
+    width: 100px;
+}
+#a2 {
+    width: 50px;
+}
+#a3 {
+    width: 50px;
+}
+#a4 {
+    width: 35px;
+}
+#a5 {
+    width: 50px;
+}
+#a6 {
+    width: 35px;
+}
+#a7 {
+    width: 50px;
+}
+#b1 {
+    height: auto;
+}
+table input {
+    width: 100%;
+}
+.fa-check-circle {
+    color: #1eff09;
+    display: none;
+}
+.fa-times-circle {
+    color: #f44336;
+    display: none;
+}
+.reset {
+    display: none;
+}
+.bt {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+.bt button {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    height: 50px;
+    border: 2px solid #00b3ff;
+    background-color: #f2f2f2;
+    font-size: 15px;
+    color: #00b3ff;
+    text-decoration: none;
+}
+
+.bt button:hover {
+    color: #fff;
+    background-color: #00b3ff;
+    transition: 0.25s ease-in-out;
+}
+.crt {
+    padding: 10px;
+    background-color: #1eff09;
+    color: white;
+    display: none;
+}
+.wrng {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .bt button {
+        width: 125px;
+        height: 30px;
+        font-size: 15px;
+        padding: 4px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .bt {
+        flex-direction: column;
+    }
+    .bt button {
+        margin: 10px;
+    }
+}
