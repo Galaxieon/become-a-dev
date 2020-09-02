@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Memory allocation - Mal</title>
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manjari"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./mlhome.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+        <ul class="desktop">
+            <li>
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li><a href="#">Class XII</a></li>
+            <li><a href="#">Class XI</a></li>
+        </ul>
+    </div> -->
+            <!-- <nav class="nav" id="nav">
+        <ul>
+            <li>
+                <a class="active" href="./structure.html">1.1 Structure</a>
+            </li>
+            <li><a href="#news">1.2 Pointer and Array</a></li>
+            <li><a href="#contact">1.2 Pointer</a></li>
+            <li><a href="#about">1.6 Poniter</a></li>
+        </ul>
+    </nav>
+    <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Memory allocation</h1>
+                <div class="btn">
+                    <a class="pre" href="./pointermal.html"> Previous </a>
+                    <a class="nxt" href="./opertionspointermal.html">Next</a>
+                </div>
+                <div class="descriptiom">
+                    <p>
+                        <span>Compilation സമയത്ത്</span> ഒരു വേരിയബിളിനായി
+                        മെമ്മറി അനുവദിക്കുന്നത്
+                        <span>സ്റ്റാറ്റിക് മെമ്മറി അലോക്കേഷൻ</span>
+                        എന്നറിയപ്പെടുന്നു. compilation സമയത്ത് മെമ്മറി
+                        അനുവദിച്ചുകഴിഞ്ഞാൽ അത്
+                        <span>expand or compress</span> ചെയ്യാനോ
+                        <span>കഴിയില്ല.</span>
+                    </p>
+                    <h3>Example</h3>
+                    <div class="code">
+                        <code>
+                            int a[10] as integer; <br />
+                            During compilation the compiler will allocates 40
+                            bytes
+                        </code>
+                    </div>
+                    <p>
+                        <span>എക്സിക്യൂഷൻ സമയത്ത്</span> മെമ്മറി അനുവദിക്കുന്ന
+                        പ്രക്രിയയെ <span>ഡൈനാമിക് മെമ്മറി അലോക്കേഷൻ</span> എന്ന്
+                        വിളിക്കുന്നു.This is done using
+                        <span>‘new’ and ‘delete’</span>
+                        operators.
+                    </p>
+                    <p>
+                        <span>Memork leak</span> ഒരിക്കൽ ഒരു വേരിയബിളിന് മെമ്മറി
+                        <span>ഡൈനാമിക്</span> ആയി അനുവദിക്കുകയും പിന്നീട്
+                        അതിന്റെ
+                        <span>
+                            ഉപയോഗത്തിന് ശേഷം മെമ്മറി ഡി-അലോക്കേറ്റ്
+                            ചെയ്യാതിരിക്കുകയും</span
+                        >
+                        ചെയ്താൽ, <span>മെമ്മറി നഷ്ടപ്പെടും</span>. മെമ്മറി
+                        dynamic അനുവദിച്ചെങ്കിലും <span>റിലീസ്</span> ചെയ്യാത്ത
+                        ഈ <span>പ്രശ്നമാണ് മെമ്മറി ലീക്ക്.</span>
+                    </p>
+                    <h3>new and delete operators</h3>
+                    <p>
+                        <span>execution സമയത്ത്</span> (run-time) മെമ്മറി
+                        അനുവദിക്കുന്നതിന്
+                        <span>new operator</span> ഉപയോഗിക്കുന്നു.
+                    </p>
+                    <h3>The Syntax is</h3>
+                    <div class="code">
+                        <code> pointer_variable=new data_type;</code>
+                    </div>
+                    <p>
+                        new operator ഉപയോഗിച്ച് അനുവദിച്ച മെമ്മറി
+                        സ്വതന്ത്രമാക്കാൻ delete operator ഉപയോഗിക്കുന്നു
+                    </p>
+                    <h3>The syntax is</h3>
+                    <div class="code">
+                        <code> delete pointer_variable;</code>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./pointermal.html"> Previous </a>
+                    <a class="nxt" href="./opertionspointermal.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

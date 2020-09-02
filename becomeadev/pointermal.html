@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manjari"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Pointer-Mal</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./mlhome.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+            <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+            <ul class="desktop">
+                <li>
+                    <a href="./home.html"><i class="fas fa-home"></i></a>
+                </li>
+                <li><a href="#">Class XII</a></li>
+                <li><a href="#">Class XI</a></li>
+            </ul>
+        </div> -->
+            <!-- <nav class="nav" id="nav">
+            <ul>
+                <li>
+                    <a class="active" href="./structure.html">1.1 Structure</a>
+                </li>
+                <li><a href="#news">1.2 Pointer and Array</a></li>
+                <li><a href="#contact">1.2 Pointer</a></li>
+                <li><a href="#about">1.6 Poniter</a></li>
+            </ul>
+        </nav>
+        <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Pointers</h1>
+                <div class="btn">
+                    <a class="pre" href="./structuremal.html"> Previous </a>
+                    <a class="nxt" href="./alloctionmal.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        കമ്പ്യൂട്ടറിൽ ഡാറ്റ ഒരു memory cell ൽ store ചെയ്യുന്നു.
+                        ഓരോ സെല്ലിനും ഒരു unique address ഉണ്ട് . pointer
+                        variable memory location ന്റെ വിലാസം സൂക്ഷിക്കുന്നു.
+                    </p>
+                </div>
+                <div class="description">
+                    <h2>Declaring a pointer</h2>
+                    <h3>The syntax is</h3>
+                    <div class="code">
+                        <code> Data_Type *Pointer_Variable;</code>
+                    </div>
+                    <h3>For Example</h3>
+                    <div class="code">
+                        <code> int *ptr;</code>
+                    </div>
+                    <p>
+                        ഇവിടെ <span>ptr</span> ഒരു
+                        <span>പോയിന്റർ വേരിയബിളാണ്</span>
+                    </p>
+                    <p>
+                        Initializing a pointer. We can initialize a pointer as,
+                    </p>
+                    <div class="code">
+                        <code> Ptr=&amp;a;</code>
+                    </div>
+                    <p>
+                        ഇവിടെ <span>pointer variable ptr</span> ൽ വേരിയബിൾ
+                        <span>a</span> യുടെ
+                        <span>address</span> അടങ്ങിയിരിക്കുന്നു. <br />
+                        ഒരു പോയിന്റർ വേരിയബിൾ സംഭരിച്ചിരിക്കുന്ന value
+                        നേടുന്നതിന് <span>* operator</span> ഉപയോഗിക്കുന്നു.
+                        <br />
+                        <span>address of operator(&)</span> ഒരു
+                        <span>വേരിയബിളിന്റെ address</span>
+                        വീണ്ടെടുക്കാൻ ഉപയോഗിക്കുന്നു
+                    </p>
+                    <h3>Example</h3>
+                    <div class="code">
+                        <code>
+                            #include&lt;iostream&gt; <br />
+                            using namespace std; <br />
+                            int main() <br />
+                            { <br />
+                            int a=10; <br />
+                            int *Ptr=&amp;a; cout&lt;&lt;"The value of
+                            a="&lt;&lt;a&lt;&lt;"\n"; <br />
+                            cout&lt;&lt;"The address of a="&lt;&lt;Ptr; <br />
+                            return 0; <br />
+                            }
+                        </code>
+                    </div>
+                    <h3>
+                        Output: <br />
+                        The value of a=10 <br />
+                        The address of a= oxffoo
+                    </h3>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./structuremal.html"> Previous </a>
+                    <a class="nxt" href="./alloctionmal.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

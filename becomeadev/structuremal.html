@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manjari"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Structure-Mal</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./mlhome.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+                <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+                <ul class="desktop">
+                    <li>
+                        <a href="./home.html"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li><a href="#">Class XII</a></li>
+                    <li><a href="#">Class XI</a></li>
+                </ul>
+            </div> -->
+            <!-- <nav class="nav" id="nav">
+                <ul>
+                    <li>
+                        <a class="active" href="./structure.html">1.1 Structure</a>
+                    </li>
+                    <li><a href="#news">1.2 Pointer and Array</a></li>
+                    <li><a href="#contact">1.2 Pointer</a></li>
+                    <li><a href="#about">1.6 Poniter</a></li>
+                </ul>
+            </nav>
+            <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Structures and Pointers - Structure</h1>
+                <div class="btn">
+                    <a class="pre" style="visibility: hidden"> Previous </a>
+                    <a class="nxt" href="./pointermal.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        പരസ്പര ബന്ധമുള്ള ഡാറ്റ ഇനങ്ങളുടെ ശേഖരത്തെ
+                        പ്രതിനിധീകരിക്കുന്ന user defined ഡാറ്റ തരമാണ് Structure
+                    </p>
+                </div>
+                <div class="descriprion">
+                    <h2>Defining a structure</h2>
+                    <p>
+                        ഒരു structure declare ചെയ്യാൻ
+                        <span>struct statement</span>
+                        ഉപയോഗിക്കുന്നു
+                    </p>
+                    <div class="code">
+                        <code>
+                            struct [struct tag] <br />
+                            { <br />
+                            Member definition; <br />
+                            Member definition; <br />
+                            ...................................... <br />
+                            ...................................... <br />
+                            };
+                        </code>
+                    </div>
+                    <p>
+                        ഒരു structure ലെ അംഗങ്ങളെ
+                        <span>structure members</span> എന്നും വിളിക്കുന്നു
+                    </p>
+                    <h3>For Example</h3>
+                    <div class="code">
+                        <code>
+                            struct student <br />
+                            { <br />
+                            int rollno; <br />
+                            char grade; <br />
+                            float percentage; <br />
+                            };
+                        </code>
+                    </div>
+                    <h3>Accessing elements of a structure</h3>
+                    <p>
+                        ഒരു structure ലെ ഘടകങ്ങൾ
+                        <span>ഡോട്ട് (.) ഓപ്പറേറ്റർ</span>
+                        അല്ലെങ്കിൽ <span>period operator</span> ഉപയോഗിച്ച്
+                        access ചെയ്യുന്നു.
+                    </p>
+                    <h3>The syntax for accessing elements is</h3>
+                    <div class="code">
+                        <code
+                            >[Object name][Operator][Member variable Name]</code
+                        >
+                    </div>
+                    <h3>For Example</h3>
+                    <div class="code">
+                        <code>
+                            s.name. <br />
+                            #include&lt;iostream&gt; <br />
+                            using namespace std; <br />
+                            struct student <br />
+                            { <br />
+                            int rollno; <br />
+                            int m1,m2,m3; <br />
+                            }; <br />
+                            int main() <br />
+                            { <br />
+                            student s; //Object declared <br />
+                            cout&lt;&lt;"Enter the marks in Three subjects";
+                            <br />
+                            cin&gt;&gt;s.m1&gt;&gt;s.m2&gt;&gt;s.m3; <br />
+                            cout&lt;&lt;"Total="&lt;&lt;s.m1+s.m2+s.m3; <br />
+                            return 0; <br />
+                            }
+                        </code>
+                    </div>
+                    <h2>Nested Structure</h2>
+                    <p>
+                        മറ്റൊരു
+                        <span
+                            >structure യ്ക്കുള്ളിൽ സ്ഥാപിച്ചിരിക്കുന്ന ഒരു
+                            structure നെ nested structure</span
+                        >
+                        എന്ന് വിളിക്കുന്നു
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Definition A</th>
+                            <th>Definition B</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                struct date <br />
+                                { <br />
+                                Short day; <br />
+                                Short month; <br />
+                                Short year; <br />
+                                }; <br />
+                                struct student <br />
+                                { <br />
+                                into adm_no; <br />
+                                char name [20]; <br />
+                                date dt_adm; <br />
+                                float fee; <br />
+                                };
+                            </td>
+                            <td>
+                                Struct student <br />
+                                { <br />
+                                int adm_no; <br />
+                                char name [20];<br />
+                                struct date <br />
+                                { <br />
+                                Short day; <br />
+                                short month; <br />
+                                Short year; <br />
+                                } dt_adm; <br />
+                                float fee; <br />
+                                };
+                            </td>
+                        </tr>
+                    </table>
+                    <h3>
+                        Elements of nested structure are accessed as follows:
+                    </h3>
+                    <div class="code">
+                        <code>
+                            student st; <br />
+                            cin&gt;&gt;st.dt_adm.day <br />
+                            &gt;&gt;st.dt_adm.month <br />
+                            &gt;&gt;st.dt_adm.year;
+                        </code>
+                    </div>
+                    <h3>Difference between Array and Structure</h3>
+                    <table>
+                        <tr>
+                            <th>Array</th>
+                            <th>Structure</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                സമാന ഡാറ്റയുടെ ഒരു ശേഖരമാണ് ഒരു array
+                                (Homogeneous)
+                            </td>
+                            <td>
+                                വ്യത്യസ്ത ഡാറ്റയുടെ ശേഖരമാണ് structure
+                                (Heterogeneous)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                ഒരു array യിലെ ഘടകങ്ങൾ access ചെയ്യാൻ ഒരു array
+                                index ഉപയോഗിക്കുന്നു
+                            </td>
+                            <td>
+                                ഒരു structure ലെ ഘടകങ്ങൾ dot (.) ഓപ്പറേറ്റർ
+                                ഉപയോഗിച്ച് access ചെയ്യുന്നു
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Array is derived data type</td>
+                            <td>Structure is user defined data type</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn">
+                    <a class="pre" style="visibility: hidden"> Previous </a>
+                    <a class="nxt" href="./pointermal.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

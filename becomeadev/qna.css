@@ -10,6 +10,11 @@
 }
 input {
     margin: 10px;
+    border: none;
+    outline: none;
+}
+input:focus {
+    border-bottom: 3px solid #00b3ff;
 }
 #a1 {
     width: 100px;

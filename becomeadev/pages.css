@@ -1,5 +1,5 @@
 * {
-    font-family: "Montserrat";
+    font-family: "Montserrat", "Manjari";
     outline: none;
     box-sizing: border-box;
 }
@@ -99,7 +99,7 @@ h1 {
     font-weight: bold;
 }
 code {
-     font-size: 16px; 
+    font-size: 16px;
     line-height: 32px;
 }
 .description p {
@@ -198,7 +198,7 @@ footer span a {
         font-size: 25px;
     }
     #insta {
-        height: 25px;
+        height: 26px;
         width: 28px;
         border-radius: 10px;
     }
@@ -211,7 +211,8 @@ footer span a {
     }
 }
 @media screen and (max-width: 320px) {
-    th,td {
+    th,
+    td {
         padding: 15px;
     }
     .opps {
