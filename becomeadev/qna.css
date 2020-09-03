@@ -12,9 +12,11 @@ input {
     margin: 10px;
     border: none;
     outline: none;
+    border-bottom: 3px solid #555;
 }
 input:focus {
     border-bottom: 3px solid #00b3ff;
+    transition: border 0.25s ease-in-out;
 }
 #a1 {
     width: 100px;
