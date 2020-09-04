@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manjari"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Pointer and String - ml</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./mlhome.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+<a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+<ul class="desktop">
+    <li>
+        <a href="./home.html"><i class="fas fa-home"></i></a>
+    </li>
+    <li><a href="#">Class XII</a></li>
+    <li><a href="#">Class XI</a></li>
+</ul>
+</div> -->
+            <!-- <nav class="nav" id="nav">
+<ul>
+    <li>
+        <a class="active" href="./structure.html">1.1 Structure</a>
+    </li>
+    <li><a href="#news">1.2 Pointer and Array</a></li>
+    <li><a href="#contact">1.2 Pointer</a></li>
+    <li><a href="#about">1.6 Poniter</a></li>
+</ul>
+</nav>
+<div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>പോയിന്ററും സ്ട്രിങ്ങും (pointer and string)</h1>
+                <div class="btn">
+                    <a class="pre" href="./pointerandarraymal.html">
+                        Previous
+                    </a>
+                    <a class="nxt" href="./pointerandstructuremal.html">Next</a>
+                </div>
+                <div class="intro">
+                    <p>
+                        സ്ട്രിങ്ങനെ കാരക്ടർ അറെ വഴി ശേഖരിക്കാമെന്നും അറെയുടെ
+                        പേരിനെ സ്ട്രിങ് വേരിയബിളായി കണക്കാക്കാമെന്നും നമ്മൾ
+                        11-ന്നാം ക്ലാസ്സിൽ പഠിച്ചു. അറെയുടെ പേരിൽ അതിന്റെ ബേസ്
+                        അഡ്രസ്സ് അടങ്ങിയിരിക്കുന്നു എന്നും നമ്മൾ മനസ്സിലാക്കി.
+                        അതുകൊണ്ട് അറെയെ ഒരു പോയിന്റ്റായി കണക്കാക്കാം. ഇനി
+                        നമുക്ക് ഈ ആശയങ്ങളെ യോജിപ്പിച്ചുകൊണ്ട് ഒരു സ്ട്രിങ്ങിനെ
+                        പോയിന്ററിലൂടെ എങ്ങനെ ഉപയോഗിക്കാമെന്നും അതിന് മറ്റ്
+                        പോയിന്റ്ററുമായി എന്ത് വ്യത്യാസമുണ്ടെന്നും ചർച്ച ചെയ്യാം.
+                    </p>
+                </div>
+                <div class="decription">
+                    <h3>താഴെ കൊടുത്ത വാചകങ്ങൾ പരിശോധിക്കുക.</h3>
+                    <div class="code">
+                        <code>
+                            char str[20]; / / ക്യാരക്ടർ അറെ പ്രഖ്യാപനം <br />
+                            char *sp; / / ക്യാരക്ടർ പോയിന്റർ പ്രഖ്യാപനം <br />
+                            cin&gt;&gt;str; / /"program" എന്ന സ്ട്രിങ്ങിനെ
+                            ഇൻപുട്ട് ചെയ്യുന്നു എന്ന് കരുതുക <br />
+                            cout&lt;&lt;str; / /"program" എന്ന സ്ട്രിങ്ങിനെ
+                            പ്രദർശിപ്പിക്കാൻ <br />
+                            sp=str; / /str എന്ന സ്ട്രിങ്ങിന്റെ ഉള്ളടക്കം,
+                            പോയിന്റർ sp യിലേക്ക് കോപ്പി ചെയ്യുന്നു. <br />
+                            cout&lt;&lt;sp; / /"program" എന്ന സ്ട്രിങ്
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;&str[0]; / /"program" എന്ന സ്ട്രിങ്
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;sp+1; / /"program" എന്ന സ്ട്രിങ്
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;&str+1; / /"program" എന്ന സ്ട്രിങ്
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;str[0]; / /'p' എന്ന ക്യാരക്ടർ
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;*sp; / /'p' എന്ന ക്യാരക്ടർ
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;*&amp;str; / /str അറെയുടെ ബേസ് അഡ്രെസ്സ്
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;&amp;sp; / /sp എന്ന പോയിന്ററിന്റെ വിലാസം
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                        </code>
+                    </div>
+                    <h2>കാരക്ടർ പോയിന്ററിന്റെ നേട്ടങ്ങൾ</h2>
+                    <h3>
+                        സ്ട്രിങ്ങിനെ സ്റ്റോർ ചെയ്യാൻ കാരക്ടർ പോയിന്റർ
+                        ഉപയോഗികുമ്പോൾ ചുവടെ കൊടുത്ത നേട്ടങ്ങൾ ഉണ്ടാകുന്നു.
+                    </h3>
+                    <ul>
+                        <li>
+                            വലുപ്പം പ്രഖ്യാപന പ്രസ്താവനയിൽ രേഖപ്പെടുത്തതുകൊണ്ട്,
+                            എത്ര വലുപ്പമുള്ള സ്ട്രിങ്ങും ശേഖരിക്കാം. മെമ്മറി
+                            പാഴാക്കപ്പെടുകയോ തികയാതിരിക്കുകയോ ചെയ്യുന്നില്ല.
+                            എന്നാൽ ഇത് പ്രാരംഭവില നൽകുമ്പോൾത്തന്നെ
+                            ചെയ്തിരിക്കണം. (eg, char *str = "program";)
+                        </li>
+                        <li>
+                            വില നൽകാൻ ഓപ്പറേറ്റർ (=) ഉപയോഗിച്ച് സ്ട്രിങ് കോപ്പി
+                            ചെയ്യാം.
+                        </li>
+                        <li>
+                            സ്ട്രിങ്ങിലെ ഏത് കാരക്ടറും പോയിന്റർ ഉപയോഗിച്ച്
+                            എളുപ്പം പുറത്തെടുക്കാം.
+                        </li>
+                        <li>
+                            കാരക്ടർ അറകളെ കറുത്ത മെമ്മറി സ്ഥലം ഉപയോഗിച്ച്
+                            കൈകാര്യം ചെയ്യാം.
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./pointerandarraymal.html">
+                        Previous
+                    </a>
+                    <a class="nxt" href="./pointerandstructuremal.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

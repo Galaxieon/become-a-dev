@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manjari"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Operations on pointers - ml</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./mlhome.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+        <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+        <ul class="desktop">
+            <li>
+                <a href="./home.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li><a href="#">Class XII</a></li>
+            <li><a href="#">Class XI</a></li>
+        </ul>
+    </div> -->
+            <!-- <nav class="nav" id="nav">
+        <ul>
+            <li>
+                <a class="active" href="./structure.html">1.1 Structure</a>
+            </li>
+            <li><a href="#news">1.2 Pointer and Array</a></li>
+            <li><a href="#contact">1.2 Pointer</a></li>
+            <li><a href="#about">1.6 Poniter</a></li>
+        </ul>
+    </nav>
+    <div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>
+                    പോയിന്റെറിലെ അരിത്തമെറ്റിക്‌ പ്രവർത്തനങ്ങൾ (Arithmetic
+                    operation on pointers)
+                </h1>
+                <div class="btn">
+                    <a class="pre" href="./alloctionmal.html"> Previous </a>
+                    <a class="nxt" href="./pointerandarraymal.html">Next</a>
+                </div>
+                <div class="description">
+                    <p>
+                        മെമ്മറി വിലാസം എന്നത് ഒരു സംഖ്യയാണെന്ന് നമുക്ക് അറിയാം.
+                        അതിനാൽ ചില അരിത്തമെറ്റിക്‌ പ്രവർത്തനങ്ങളും നമുക്ക്
+                        പോയ്ന്റർ വേരിയബിലിൽ പ്രയോഗിക്കാം.
+                    </p>
+                    <div class="code">
+                        <code>
+                            // si_ptr is 1000 <br />
+                            // fl_ptr is 1010 <br />
+                            cout&lt;&lt;si_ptr + 1; <br />
+                            cout&lt;&lt;fl_ptr + 1;
+                        </code>
+                    </div>
+                    <h3>
+                        എന്തായിരിക്കും ഔട്ട്പുട്ട്? 1001 ഉം 1011 ആണ് ഔട്ട്പുട്ട്
+                        എന്ന് നിങ്ങൾ കരുതുന്നുണ്ടോ.
+                    </h3>
+                    <p>
+                        പോയിന്റെരിനോട് 1 കൂട്ടുന്നത്
+                        <span>int</span> തരത്തിലുള്ള വേരിയബിലിനോടോ
+                        <span>float</span> തരത്തിലുള്ള വേരിയബിലിനോടോ 1
+                        കൂട്ടുന്നത് പോലെ അല്ല. നമ്മൾ ഒരു
+                        <span>short int</span> പോയ്ന്ററിനോട് 1 കൂട്ടുമ്പോൾ, ആ
+                        പ്രയോഗം <span>തൊട്ടടുത്ത മെമ്മറി</span> സ്ഥാനത്തിന്റെ
+                        വിലസമായി മാറുന്നു. അതായത് <span>1000, 1001</span> എന്നീ
+                        ലൊക്കേഷനുകൾ <span>short int</span> വേരിയബിൾ
+                        ഉപയോഗിക്കുന്ന ലൊക്കേഷനുകളാണ്. <span>1002</span> എന്നത്
+                        അടുത്ത <span>short int</span> ന്റെ ബേസ്
+                        <span>അഡ്രസ്സായിരിക്കും.</span> അതായത് നമ്മൾ
+                        <span>short int</span>
+                        പോയ്ന്റർ വേരിയബിലിനോട് ഒന്ന് കൂട്ടുമ്പോൾ
+                        <span>short int ന്റെ യഥാർത്ഥ വലുപ്പം</span> (2) ആണ്
+                        memory അഡ്രസിനോട് കൂട്ടുന്നത്. ഇതുപോലെ ഒരു
+                        <span>float</span>
+                        പോയ്ന്റർ വേരിയബിലിനോട് 1 കൂട്ടുമ്പോൾ അതിന്റെ വലുപ്പമായ 4
+                        ആണ് വിലാസത്തോട് കൂട്ടുന്നത്. അതുകൊണ്ട്
+                        <span>f1_ptr+1</span> എന്ന പാദപ്രയോഗം നൽകുന്നത്
+                        <span>1014</span>
+                        എന്ന വിലാസമാണ്. അതുകൊണ്ട് <span>si_ptr+4</span> എന്ന
+                        പാദപ്രേയോഗം <span>1008 (1000+4×2)</span> എന്ന വിലാസം
+                        നൽകുമെന്ന് വ്യക്തമാണ്. ഇതുപോലെ
+                        <span>f1_ptr+3</span> നൽകുന്നത്<span>
+                            1022 (1010+3×4)</span
+                        >
+                        എന്ന വിലാസമാണ്. ഇതുപോലെ പോയ്ന്റർ വേരിയബ്ലുകളിൽ
+                        വ്യവകലനവും (subtraction) നടത്താം. മറ്റ് അരിത്തമെറ്റിക്‌
+                        ഓപ്പറേഷനുകൾ ഒന്നും തന്നെ പോയ്ന്റർ വേരിയബിളിനു മുകളിൽ
+                        പ്രവർത്തിക്കുകയില്ല.
+                    </p>
+                    <div class="code">
+                        <code>
+                            int *ptr1, *ptr2; / / രണ്ട് പോയിന്റർ വേരിയബിളുകളുടെ
+                            പ്രഖ്യാപനം <br />
+                            ptr1 = new int (5); /* ഡൈനമിക് മെമ്മറി അലോക്കേഷൻ
+                            (വിലാസം 1000 ആണെന്നിരിക്കട്ടെ). 5 എന്ന സംഖ്യ
+                            പ്രാരംഭവിലയായ് ചേർന്നിരിക്കുന്നു. 5*/ <br />
+                            ptr2 = ptr1 + 1; /* ptr2 തൊട്ടടുത്ത ഇന്റീജർ സ്ഥാനമായ
+                            1004 ലേക്ക് പോയിന്റ് ചെയ്യും * / <br />
+                            ++ptr2; / / ptr2 = ptr2 + 1 എന്ന ഓപ്പറേഷന് തുല്യം
+                            <br />
+                            cout&lt;&lt;ptr1; / / 1000 പ്രദർശിപ്പിക്കുന്നു
+                            <br />
+                            cout&lt;&lt;*ptr1; / / 5 പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;ptr2; / / 1004 പ്രദർശിപ്പിക്കുന്നു
+                            <br />
+                            cin&gt;&gt;*ptr2; /* ഒരു ഇന്റീജർ റീഡ് ചെയ്ത് (12
+                            ആണെന്നിരിക്കട്ടെ) ഇതിനെ 1004 എന്ന ലൊക്കേഷനിൽ
+                            ശേഖരിക്കുന്നു */ <br />
+                            cout&lt;&lt;*ptr1 + 1; / / 6 (5 + 1)
+                            പ്രദർശിപ്പിക്കുന്നു <br />
+                            cout&lt;&lt;*(ptr1 + 2); / / 12 പ്രദർശിപ്പിക്കുന്നു,
+                            (1004 ലെ വില ) <br />
+                            ptr--; / / ptr1 = ptr - 1 എന്ന പ്രസ്താവനക്ക് തുല്യം
+                        </code>
+                        <h3>
+                            പോയ്ന്ററിലെ റിലേഷണൽ പ്രവർത്തനങ്ങൾ (Relational
+                            operations on pointers)
+                        </h3>
+                        <p>
+                            നാം പഠിച്ച ആറ് റിലേഷണൽ ഓപ്പറേറ്ററുകളിൽ ==
+                            (equality-തുല്യം), != (Non equality-തുല്യമല്ല) എന്നീ
+                            ഓപ്പറേറ്ററുകൾ പോയിന്റർ വേരിയബിളുകളിൽ
+                            ഉപയോഗിക്കാറുള്ളു. മെമ്മറി വിലാസം എന്നാൽ ഒരു മെമ്മറി
+                            സ്ഥാനം തിരിച്ചരിയാനുള്ള സവിശേഷ സംഖ്യയാണ്. അതിനാൽ
+                            ഇതിനു മുകളിൽ മറ്റ് റിലേഷനിൽ ഓപ്പറേറ്ററുകൾ
+                            ഉപയോഗിക്കുന്നതിൽ അർത്ഥമില്ല. p, q എന്നിവ രണ്ട്
+                            പോയിന്ററുകൾ ആണെങ്കിൽ അവയിൽ
+                            തില്യമായതോ/വ്യസ്ത്യസ്തമായതോ ആയി മെമ്മറി സ്ഥാനങ്ങളുടെ
+                            വിലാസങ്ങളാണ് ഉണ്ടാവുക. ഇത് പരിശോധിക്കാൻ p==q
+                            അല്ലെങ്കിൽ p!=q എന്നീ പദപ്രയോഗങ്ങൾ ഉപയോഗിക്കാം.
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./alloctionmal.html"> Previous </a>
+                    <a class="nxt" href="./pointerandarraymal.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Manjari"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <title>Pointers and array - Mal</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./mlhome.html"><i class="fas fa-home"></i></a>
+                <!-- <a href="#news">News</a>
+    <a href="#contact">Contact</a> -->
+            </div>
+            <!-- <div class="nav-section">
+    <ul class="desktop">
+        <li>
+            <a href="./home.html"><i class="fas fa-home"></i></a>
+        </li>
+        <li><a href="#">Class XII</a></li>
+        <li><a href="#">Class XI</a></li>
+    </ul>
+</div> -->
+            <!-- <nav class="nav" id="nav">
+    <ul>
+        <li>
+            <a class="active" href="./structure.html">1.1 Structure</a>
+        </li>
+        <li><a href="#news">1.2 Pointer and Array</a></li>
+        <li><a href="#contact">1.2 Pointer</a></li>
+        <li><a href="#about">1.6 Poniter</a></li>
+    </ul>
+</nav>
+<div class="ad" id="ad"></div> -->
+        </header>
+        <main>
+            <div class="container">
+                <h1>Pointer and Array</h1>
+                <div class="btn">
+                    <a class="pre" href="./opertionspointermal.html">
+                        Previous
+                    </a>
+                    <a class="nxt" href="./pointerandstringmal.html">Next</a>
+                </div>
+                <div class="description">
+                    <img src="../becomeadev/images/1.4.JPG" alt="" />
+                    <p>
+                        ഒരു പേരിൽ ഒരേ തരത്തിലുള്ള ഒന്നിലധികം ഡാറ്റകളെ ശേഖരിക്കാൻ
+                        അറെയ്ക്ക് കഴിയുമെന്ന് നാം പഠിച്ച് കഴിഞ്ഞല്ലോ. തുടർച്ചയായ
+                        മെമ്മറി സ്ഥാനങ്ങളിൽ ഡാറ്റാ ശേഖരിക്കുന്നതിനു അറെ
+                        ഉപയോഗിക്കാം. ചിത്രം കാണിക്കുന്നത് ar[10]എന്ന int ടൈപ്പ്
+                        അറെയുടെ ചിത്രമാണ്. ഇതിൽ 10 സംഖ്യകളുണ്ട്. ഈ അറെ 1000 എന്ന
+                        മെമ്മറി ലൊക്കേഷനിൽ തുടങ്ങുന്നതായി സങ്കൽപ്പിക്കുക.
+                        ഇതിനകത്തെ ഓരോ സ്ഥാനവും 4 ബൈറ്റ് വീതം ആണ് (GCC
+                        അനുസരിച്ച്). ഈ അറെയിലെ ഏത് അംഗത്തെയും അറെയുടെ പേരും
+                        സബ്സ്ക്രിപ്റ്റും ഉപയോഗിച്ച് സൂചിപ്പിക്കാം. ഉദാഹരണം ar[0]
+                        എന്നത് 34 എന്ന സംഖ്യ നൽകുന്നു. ar[1] 12 ഉം ar[9] 19 ഉം
+                        തിരിച്ചുതരുന്നു.
+                    </p>
+                    <p>
+                        ptr എന്നത് ഒരു ഇന്റീജർ പോയിന്റർ ആണെങ്കിൽ ar എന്ന അറെയുടെ
+                        ആദ്യത്തെ സ്ഥാനത്തിന്റെ വിലാസം താഴെ കൊടുക്കുന്ന രീതിയിൽ
+                        പോയിന്ററിൽ ശേഖരിക്കാം.
+                    </p>
+                    <div class="code">
+                        <code>ptr = &ar[0];</code>
+                    </div>
+                    <h3>
+                        ഇനി നമ്മുക്ക് ചുവടെ ചേർത്ത വാചകങ്ങളുടെ ഔട്ട്പുട്ട്
+                        പരിശോധിക്കാം.
+                    </h3>
+                    <div class="code">
+                        <code>
+                            cout&lt;&lt;ptr; / / 1000 പ്രദർശിപ്പിക്കുന്നു, ar[0]
+                            യുടെ വിലാസം <br />
+                            cout&lt;&lt;*ptr; / / 34 പ്രദർശിപ്പിക്കുന്നു, ar[0]
+                            യുടെ വില <br />
+                            cout&lt;&lt;(ptr+1); / / 1004 പ്രദർശിപ്പിക്കുന്നു,
+                            ar[1] ന്റെ വിലാസം<br />
+                            cout&lt;&lt;*(ptr+1); / / 12 പ്രദർശിപ്പിക്കുന്നു, ar
+                            [9] ന്റെ വില<br />
+                            cout&lt;&lt;(ptr+9); / / 1036 പ്രദർശിപ്പിക്കുന്നു,
+                            ar [9] ന്റെ വിലാസം<br />
+                            cout&lt;&lt;*(ptr+9); / / 19 പ്രദർശിപ്പിക്കുന്നു,
+                            ar[9] ന്റെ വില
+                        </code>
+                    </div>
+                    <br />
+                    <div class="code">
+                        <code> cout&lt;&lt;ar; </code>
+                    </div>
+                    <h3>
+                        എന്ന പ്രസ്താവനയുടെ ഔട്ട്പുട്ട് നിങ്ങൾക് കണ്ടെത്താൻ
+                        കഴിയുമോ?
+                    </h3>
+                    <p>
+                        ഔട്ട്പുട്ട് 1000 ആണ്. ഇത് അറെയുടെ ആദ്യത്തെ സ്ഥാനത്തിന്റെ
+                        വിലാസമാണ്. ഈ വിലാസത്തെ അറെയുടെ അടിസ്ഥാന വിലാസം എന്നു
+                        പറയുന്നു. വിലാസം ശേഖരിക്കുന്ന വേരിയബിൾ ഒരു
+                        പോയിന്ററാണെന്നു നമുക്കറിയാം. അതുകൊണ്ട് അറെയുടെ പേരായ ar
+                        ഉം ഒരു പോയിന്ററാണ്. ആയതിനാൽ താഴെ കൊടുത്ത വാചകങ്ങൾ
+                        ശരിയാണ്.
+                    </p>
+                    <div class="code">
+                        <code>
+                            cout&lt;&lt;ar; / /1000 പ്രദർശിപ്പിക്കുന്നു, ar[0]
+                            യുടെ വിലാസം <br />
+                            ptr=ar; / / ptr=&ar[0] എന്നതിന്ന് തുല്യം; <br />
+                            cout&lt;&lt;*ar; / / 34 പ്രദർശിപ്പിക്കുന്നു,
+                            cout&lt;&lt;ar[0]; എന്നതിന് തുല്യം
+                        </code>
+                    </div>
+                    <h2>Dynamic array</h2>
+                    <p>
+                        <span>new</span> ഓപ്പറേറ്റർ ഉപയോഗിച്ച്
+                        <span>runtime</span> സമയത്ത് സൃഷ്ടിച്ച ഒരു array യാണ്
+                        <span>Dynamic array</span>
+                    </p>
+                    <h3>The syntax is:</h3>
+                    <div class="code">
+                        <code> pointer = new data_type [size]; </code>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a class="pre" href="./opertionspointermal.html">
+                        Previous
+                    </a>
+                    <a class="nxt" href="./pointerandstringmal.html">Next</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
