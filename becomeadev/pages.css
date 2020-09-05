@@ -110,6 +110,9 @@ p span {
     color: #00b3ff;
     font-weight: bold;
 }
+li {
+    margin: 15px 0px;
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -209,11 +212,15 @@ footer span a {
         margin-right: 5%;
         padding: 0;
     }
+    th,
+    td {
+        padding: 10px;
+    }
 }
 @media screen and (max-width: 320px) {
     th,
     td {
-        padding: 15px;
+        padding: 5px;
     }
     .opps {
         width: 300px;
