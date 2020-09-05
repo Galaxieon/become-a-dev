@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./nav.css" />
+        <link rel="stylesheet" href="./pages.css" />
+        <link rel="stylesheet" href="./qna.css" />
+        <title>Concept of OPPS - Exercises</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo-section">
+                    <img src="../icons/bad logo.png" alt="BECOME A DEV logo" />
+                </div>
+            </div>
+            <div id="navbar">
+                <a href="./exercises.html"><i class="fas fa-home"></i></a>
+                <a href="./home.html">CLASSES</a>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="qna">
+                    <div class="q">
+                        <h2>
+                            Compare Procedural paradigm and Procedural paradigm
+                        </h2>
+                        <p>
+                            NB: First letter of all answer must be capital other
+                            are small letter
+                        </p>
+                    </div>
+                    <br />
+                    <table>
+                        <tr>
+                            <th>Procedural paradigm</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A1" /><i
+                                    id="A11"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A21" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A2" /><i
+                                    id="A12"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A22" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A3" /><i
+                                    id="A13"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A23" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A4" /><i
+                                    id="A14"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A24" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Object oriented paradigm</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A5" /><i
+                                    id="A15"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A25" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A6" /><i
+                                    id="A16"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A26" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A7" /><i
+                                    id="A17"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A27" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="A8" /><i
+                                    id="A18"
+                                    class="fas fa-check-circle"
+                                ></i>
+                                <i id="A28" class="fas fa-times-circle"></i>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="crt" id="crt1">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng1">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="wrng" id="null1">
+                        <h4>Please Enter the Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit1" onclick="checkAns1()">
+                            Submit
+                        </button>
+                        <button id="ans1" onclick="showAns1()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset1" onclick="reset1()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div class="qna">
+                    <div class="q">
+                        <h2>Advantages of using OOP are:</h2>
+                        <p>
+                            NB: First letter of all answer must be capital other
+                            are small letter
+                        </p>
+                    </div>
+                    <ol type="A">
+                        <li><input type="text" id="B1" /></li>
+                        <li><input type="text" id="B2" /></li>
+                    </ol>
+                    <div class="crt" id="crt2">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng2">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="wrng" id="null2">
+                        <h4>Please Enter the Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit2" onclick="checkAns2()">
+                            Submit
+                        </button>
+                        <button id="ans2" onclick="showAns2()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset2" onclick="reset2()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <br />
+                <div class="qna">
+                    <div class="q">
+                        <h2>Basic concepts of OOPs</h2>
+                        <p>
+                            NB: First letter of all answer must be capital other
+                            are small letter
+                        </p>
+                    </div>
+                    <dl>
+                        <dt><h4>Data abstraction:</h4></dt>
+                        <dd>
+                            <input type="text" id="c1" />
+                            <i id="c11" class="fas fa-check-circle"></i>
+                            <i id="c21" class="fas fa-times-circle"></i>
+                        </dd>
+                        <dt><h4>Data encapsulation:</h4></dt>
+                        <dd>
+                            <input type="text" id="c2" />
+                            <i id="c12" class="fas fa-check-circle"></i>
+                            <i id="c22" class="fas fa-times-circle"></i>
+                        </dd>
+                        <dt><h4>Polymorphism:</h4></dt>
+                        <dd>
+                            <input type="text" id="c3" />
+                            <i id="c13" class="fas fa-check-circle"></i>
+                            <i id="c23" class="fas fa-times-circle"></i>
+                        </dd>
+                        <dt><h4>Inheritance:</h4></dt>
+                        <dd>
+                            <input type="text" id="c4" />
+                            <i id="c14" class="fas fa-check-circle"></i>
+                            <i id="c24" class="fas fa-times-circle"></i>
+                        </dd>
+                        <dt><h4>Modularity:</h4></dt>
+                        <dd>
+                            <input type="text" id="c5" />
+                            <i id="c15" class="fas fa-check-circle"></i>
+                            <i id="c25" class="fas fa-times-circle"></i>
+                        </dd>
+                    </dl>
+                    <div class="crt" id="crt3">
+                        <h4>Its amazing... You are right..</h4>
+                    </div>
+                    <div class="wrng" id="wrng3">
+                        <h4>Opps... Check Your Answer</h4>
+                    </div>
+                    <div class="wrng" id="null3">
+                        <h4>Please Enter the Answer</h4>
+                    </div>
+                    <div class="bt">
+                        <button id="submit3" onclick="checkAns3()">
+                            Submit
+                        </button>
+                        <button id="ans3" onclick="showAns3()">
+                            Show Answer
+                        </button>
+                        <button class="reset" id="reset3" onclick="reset3()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a class="pre" style="visibility: hidden"> Previous </a>
+                    <a class="nxt" href="./home.html">Go to Class</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <span class="social"><i id="fb" class="fab fa-facebook"></i></span>
+            <span class="social">
+                <a
+                    href="https://www.instagram.com/galaxieon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i id="insta" class="fab fa-instagram"></i
+                ></a>
+            </span>
+            <span class="social"
+                ><i id="telegram" class="fab fa-telegram"></i
+            ></span>
+        </footer>
+        <script src="./script.js"></script>
+        <script src="./paradigmqna.js"></script>
+    </body>
+</html>

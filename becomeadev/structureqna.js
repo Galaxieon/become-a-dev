@@ -25,6 +25,7 @@ var checkAns1 = () => {
     ) {
         document.getElementById("crt").style.display = "block";
         document.getElementById("wrng").style.display = "none";
+        document.getElementById("null").style.display = "none";
     } else if (
         a1.value == "" &&
         a2.value == "" &&
@@ -35,12 +36,12 @@ var checkAns1 = () => {
         a7.value == ""
     ) {
         document.getElementById("crt").style.display = "none";
-        document.getElementById("wrng").style.display = "block";
-        document.getElementById("wrng").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng").style.display = "none";
+        document.getElementById("null").style.display = "block";
     } else {
         document.getElementById("wrng").style.display = "block";
         document.getElementById("crt").style.display = "none";
+        document.getElementById("null").style.display = "none";
     }
 };
 var showAns1 = () => {
@@ -56,6 +57,7 @@ var showAns1 = () => {
     document.getElementById("reset").style.display = "inline";
     document.getElementById("crt").style.display = "none";
     document.getElementById("wrng").style.display = "none";
+    document.getElementById("null").style.display = "none";
 };
 var reset1 = () => {
     a1.value = "";
@@ -76,14 +78,15 @@ var checkAns2 = () => {
     if (b1.value == "complex c1;" && b2.value == "c1.real=15;") {
         document.getElementById("crt1").style.display = "block";
         document.getElementById("wrng1").style.display = "none";
+        document.getElementById("null1").style.display = "none";
     } else if (b1.value == "" && b2.value == "") {
         document.getElementById("crt1").style.display = "none";
-        document.getElementById("wrng1").style.display = "block";
-        document.getElementById("wrng1").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng1").style.display = "none";
+        document.getElementById("null1").style.display = "block";
     } else {
         document.getElementById("wrng1").style.display = "block";
         document.getElementById("crt1").style.display = "none";
+        document.getElementById("null1").style.display = "none";
     }
 };
 var showAns2 = () => {
@@ -94,6 +97,7 @@ var showAns2 = () => {
     document.getElementById("reset1").style.display = "inline";
     document.getElementById("crt1").style.display = "none";
     document.getElementById("wrng1").style.display = "none";
+    document.getElementById("null1").style.display = "none";
 };
 var reset2 = () => {
     b1.value = "";
@@ -249,9 +253,11 @@ var checkAns3 = () => {
     ) {
         document.getElementById("crt2").style.display = "block";
         document.getElementById("wrng2").style.display = "none";
+        document.getElementById("null2").style.display = "none";
     } else {
         document.getElementById("wrng2").style.display = "block";
         document.getElementById("crt2").style.display = "none";
+        document.getElementById("null2").style.display = "none";
     }
     if (
         c1.value == "" &&
@@ -263,8 +269,8 @@ var checkAns3 = () => {
     ) {
         document.getElementById("crt2").style.display = "none";
         document.getElementById("wrng2").style.display = "block";
-        document.getElementById("wrng2").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng2").style.display = "none";
+        document.getElementById("null2").style.display = "block";
         c11.style.display = "none";
         c12.style.display = "none";
         c13.style.display = "none";
@@ -317,6 +323,7 @@ var showAns3 = () => {
     document.getElementById("reset2").style.display = "inline";
     document.getElementById("crt2").style.display = "none";
     document.getElementById("wrng2").style.display = "none";
+    document.getElementById("null2").style.display = "none";
 };
 var reset3 = () => {
     c1.value = "";
@@ -335,14 +342,15 @@ var checkAns4 = () => {
     if (d1.value == "cin>>st.adm_no;") {
         document.getElementById("crt3").style.display = "block";
         document.getElementById("wrng3").style.display = "none";
+        document.getElementById("null3").style.display = "none";
     } else if (d1.value == "") {
         document.getElementById("crt3").style.display = "none";
-        document.getElementById("wrng3").style.display = "block";
-        document.getElementById("wrng3").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng3").style.display = "none";
+        document.getElementById("null3").style.display = "block";
     } else {
         document.getElementById("crt3").style.display = "none";
         document.getElementById("wrng3").style.display = "block";
+        document.getElementById("null3").style.display = "none";
     }
 };
 var showAns4 = () => {
@@ -352,6 +360,7 @@ var showAns4 = () => {
     document.getElementById("reset3").style.display = "inline";
     document.getElementById("crt3").style.display = "none";
     document.getElementById("wrng3").style.display = "none";
+    document.getElementById("null3").style.display = "none";
 };
 var reset4 = () => {
     d1.value = "";
@@ -366,14 +375,15 @@ var checkAns5 = () => {
     if (e1.value == "1004" && e2.value == "1014") {
         document.getElementById("crt4").style.display = "block";
         document.getElementById("wrng4").style.display = "none";
+        document.getElementById("null4").style.display = "none";
     } else if (e1.value == "" && e2.value == "") {
         document.getElementById("crt4").style.display = "none";
-        document.getElementById("wrng4").style.display = "block";
-        document.getElementById("wrng4").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng4").style.display = "none";
+        document.getElementById("null4").style.display = "block";
     } else {
         document.getElementById("crt4").style.display = "none";
         document.getElementById("wrng4").style.display = "block";
+        document.getElementById("null4").style.display = "none";
     }
 };
 var showAns5 = () => {
@@ -384,6 +394,7 @@ var showAns5 = () => {
     document.getElementById("reset4").style.display = "inline";
     document.getElementById("crt4").style.display = "none";
     document.getElementById("wrng4").style.display = "none";
+    document.getElementById("null4").style.display = "none";
 };
 var reset5 = () => {
     e1.value = "";
@@ -481,9 +492,11 @@ var checkAns6 = () => {
     ) {
         document.getElementById("crt5").style.display = "block";
         document.getElementById("wrng5").style.display = "none";
+        document.getElementById("null5").style.display = "none";
     } else {
         document.getElementById("wrng5").style.display = "block";
         document.getElementById("crt5").style.display = "none";
+        document.getElementById("null5").style.display = "none";
     }
     if (
         f1.value == "" &&
@@ -494,9 +507,8 @@ var checkAns6 = () => {
         f6.value == ""
     ) {
         document.getElementById("crt5").style.display = "none";
-        document.getElementById("wrng5").style.display = "block";
-        document.getElementById("wrng5").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng5").style.display = "none";
+        document.getElementById("null5").style.display = "block";
         f11.style.display = "none";
         f12.style.display = "none";
         f13.style.display = "none";
@@ -535,6 +547,7 @@ var showAns6 = () => {
     document.getElementById("reset5").style.display = "inline";
     document.getElementById("crt5").style.display = "none";
     document.getElementById("wrng5").style.display = "none";
+    document.getElementById("null5").style.display = "none";
 };
 var reset6 = () => {
     f1.value = "";
@@ -646,9 +659,11 @@ var checkAns7 = () => {
     ) {
         document.getElementById("crt6").style.display = "block";
         document.getElementById("wrng6").style.display = "none";
+        document.getElementById("null6").style.display = "none";
     } else {
         document.getElementById("wrng6").style.display = "block";
         document.getElementById("crt6").style.display = "none";
+        document.getElementById("null6").style.display = "none";
     }
     if (
         g1.value == "" &&
@@ -660,9 +675,8 @@ var checkAns7 = () => {
         g7.value == ""
     ) {
         document.getElementById("crt6").style.display = "none";
-        document.getElementById("wrng6").style.display = "block";
-        document.getElementById("wrng6").innerHTML =
-            "<h4>Please Enter the Answer<h4>";
+        document.getElementById("wrng6").style.display = "none";
+        document.getElementById("null6").style.display = "block";
         g11.style.display = "none";
         g12.style.display = "none";
         g13.style.display = "none";
@@ -705,6 +719,7 @@ var showAns7 = () => {
     document.getElementById("reset6").style.display = "inline";
     document.getElementById("crt6").style.display = "none";
     document.getElementById("wrng6").style.display = "none";
+    document.getElementById("null6").style.display = "none";
 };
 var reset7 = () => {
     g1.value = "";

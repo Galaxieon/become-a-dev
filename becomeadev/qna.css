@@ -42,7 +42,9 @@ input:focus {
 #b1 {
     height: auto;
 }
-table input {
+table input,
+li input,
+dl input {
     width: 100%;
 }
 .fa-check-circle {
