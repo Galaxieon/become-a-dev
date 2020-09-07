@@ -1,8 +1,18 @@
 var browserCheck = () => {
     var browser = navigator.userAgent;
-    var message = `Use Latest Version of Your Brower
-    Non-latest browser Will not display some effects
-    Recommended Browser Google Chrome Latest Version`;
+    var message = () => {
+        var modal = document.getElementById("myModal");
+        var close = document.getElementById("close");
+            modal.style.display = "block";
+        close.onclick = () => {
+            modal.style.display = "none";
+        };
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    };
     var error =
         "<h1>Update your Browser</h1>" +
         " Recommened Browsers" +
@@ -19,19 +29,19 @@ var browserCheck = () => {
         "<a href='mailto:galaxieon.dev@gmail.com'>Click here...</a>" +
         "mailto:galaxieon.dev@gmail.com";
     if (browser.includes("Chrome/85")) {
-        alert(message);
+        message();
     } else if (browser.includes("Chrome/80")) {
-        alert(message);
+        message();
     } else if (browser.includes("Firefox/80")) {
-        alert(message);
+        message();
     } else if (browser.includes("Safari/13")) {
-        alert(message);
+        message();
     } else if (browser.includes("MSIE 10.0")) {
-        alert(message);
+        message();
     } else if (browser.includes("Opera/70")) {
-        alert(message);
+        message();
     } else if (browser.includes("Edg/79.0.309.43")) {
-        alert(message);
+        message();
     } else {
         document.write(error);
         window.stop();

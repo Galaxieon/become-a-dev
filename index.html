@@ -10,6 +10,7 @@
         ></script>
         <script src="./browsercheck.js"></script>
         <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./modal.css">
         <title>GALAXIEON</title>
     </head>
     <body onload="browserCheck()">
@@ -61,9 +62,26 @@
                         <img src="./icons/logo.png" alt="Logo of GALAXIEON" />
                     </div>
                 </div>
-                <footer>© GALAXIEON 2020</footer>
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close" id="close">&times;</span>
+                            <h2>Notice!!!!!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Use Latest Version of Your Brower</h2>
+                            <h3>Non-latest browser Will not display some effects</h3>
+                            <h3>
+                                Recommended Browser <span>Google Chrome</span> or
+                                <span>Mozilla Firefox</span> Latest Version
+                            </h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
+        <footer>© GALAXIEON 2020</footer>
         <script src="./script.js"></script>
         <!-- <script>
             var count = new Date("sep 25,2020 00:00:00");
@@ -86,5 +104,6 @@
                 }
             }, 1000);
         </script> -->
+        <script src="./modal.js"></script>
     </body>
 </html>
