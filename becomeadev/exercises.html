@@ -9,9 +9,11 @@
         ></script>
         <link rel="stylesheet" href="./nav.css" />
         <link rel="stylesheet" href="./home.css" />
+        <link rel="stylesheet" href="../modal.css" />
+        <script src="../browsercheck.js"></script>
         <title>EXCERCISES</title>
     </head>
-    <body>
+    <body onload="browserCheck()">
         <header>
             <div class="container">
                 <div class="logo-section">
@@ -34,6 +36,10 @@
             </div> -->
         </header>
         <main>
+            <noscript
+                >This browser will no support Scripts.. You can unable to
+                explore major effects in this website</noscript
+            >
             <div class="cls">
                 <div class="container">
                     <h1>Structure And Pointers</h1>
@@ -43,7 +49,9 @@
                 </div>
                 <div class="container">
                     <h1>Object Oriented Programming</h1>
-                    <a href="./paradigmqna.html" class="button">Start Exercises</a>
+                    <a href="./paradigmqna.html" class="button"
+                        >Start Exercises</a
+                    >
                 </div>
                 <div class="container">
                     <h1>Data Structures</h1>
@@ -67,6 +75,23 @@
                 </div>
             </div>
         </main>
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="close">&times;</span>
+                    <h2>Notice!!!!!</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Use Latest Version of Your Brower</h2>
+                    <h3>Non-latest browser Will not display some effects</h3>
+                    <h3>
+                        Recommended Browser <span>Google Chrome</span> or
+                        <span>Mozilla Firefox</span> Latest Version
+                    </h3>
+                </div>
+            </div>
+        </div>
         <script src="./script.js"></script>
     </body>
 </html>
