@@ -4,28 +4,67 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./icons/favicon.png" type="image/png" />
-        <script src="https://kit.fontawesome.com/cf89783734.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="stylesheet" href="./aboutstyle.css" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-177514796-1"
+        ></script>
+        <link rel="stylesheet" href="./modal.css" />
+        <script src="./browsercheck.js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-177514796-1");
+        </script>
         <title>About-Galaxieon</title>
     </head>
-    <body>
+    <body onload="browserCheck()">
         <header>
             <div class="container">
                 <a href="index.html"
                     ><img src="./icons/logo.png" alt="Logo of GALAXIEON"
                 /></a>
-                    <ul class="desktop">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./becomeadev/home.html">Become A Dev</a></li>
-                        <li><a href="./about.html"  class="active">About</a></li>
-                        <!-- <li><a href="#">Contact</a></li> -->
-                    </ul>
+                <ul class="desktop">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./becomeadev/home.html">Become A Dev</a></li>
+                    <li><a href="./about.html" class="active">About</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                </ul>
                 <div class="icon">
                     <i class="fas fa-bars"></i>
                 </div>
             </div>
         </header>
         <main>
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close" id="close">&times;</span>
+                        <h2>Notice!!!!!</h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Use Latest Version of Your Brower</h2>
+                        <h3>
+                            Non-latest browser Will not display some effects
+                        </h3>
+                        <h3>
+                            Recommended Browser
+                            <span>Google Chrome</span> or
+                            <span>Mozilla Firefox</span> Latest Version
+                        </h3>
+                    </div>
+                </div>
+            </div>
             <div class="banner-container">
                 <div class="container">
                     <div class="para">
@@ -37,7 +76,7 @@
                                     src="./icons/logo.png"
                                     alt="GALAXIEON Logo"
                             /></span>
-                            and this fully developed by begginner front-end
+                            and this fully developed by beginner front-end
                             developers in
                             <span
                                 ><img
@@ -53,19 +92,22 @@
                             <h2>The Languages We Use</h2>
                             <ul>
                                 <li>
-                                    HTML5 <h4 class="hper">81.3%</h4>
+                                    HTML5
+                                    <h4 class="hper">81.3%</h4>
                                     <span class="bar"
                                         ><span class="html"></span
                                     ></span>
                                 </li>
                                 <li>
-                                    CSS3 <h4 class="cper">7.6%</h4>
+                                    CSS3
+                                    <h4 class="cper">7.6%</h4>
                                     <span class="bar"
                                         ><span class="css"></span
                                     ></span>
                                 </li>
                                 <li>
-                                    VANILA JAVASCRIPT <h4 class="jsper">11.1%</h4>
+                                    VANILA JAVASCRIPT
+                                    <h4 class="jsper">11.1%</h4>
                                     <span class="bar"
                                         ><span class="js"></span
                                     ></span>
