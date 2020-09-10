@@ -165,6 +165,9 @@ footer span a {
     );
     transition: 0.25s ease-in-out;
 }
+#telegram {
+    display: none;
+}
 #telegram:hover {
     color: #0088cc;
     transition: 0.5s ease-in-out;
