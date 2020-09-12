@@ -1,0 +1,11 @@
+var a1 = document.getElementById("a1");
+                var verifyButton = document.getElementById("everify");
+                a1.innerHTML = "Please Verify Your Email";
+                verifyButton.style.display = "block";
+                user.sendEmailVerification()
+                    .then(function () {
+                        alert("Verification Mail Send to Your Email" + email);
+                    })
+                    .catch(function (error) {
+                        alert(error);
+                    });

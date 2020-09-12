@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 162, 255);
 }
 body {
     background-color: #f2f2f2;
@@ -18,10 +19,19 @@ body {
     background-color: #fff;
     box-shadow: 2px 5px 10px #555;
     margin: 10px;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     display: none;
     animation: open 1s ease-in-out;
+    position: relative;
+}
+form {
+    width: 100%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   padding: 10%;
 }
 .signup,
 .login {
@@ -38,7 +48,7 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10px;
+    margin: 20px;
     outline: none;
 }
 input[type="email"],
@@ -49,7 +59,8 @@ input[type="text"] {
     border-bottom: 2px solid #8b8b8b;
 }
 input[type="email"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="text"]:focus {
     border-bottom: 2px solid rgb(0, 162, 255);
     transition: 0.5s ease-in-out;
 }
@@ -65,7 +76,7 @@ button {
     padding: 25px;
     width: 200px;
     background-color: rgba(0, 162, 255, 0.5);
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     outline: none;
     border: none;

@@ -1,40 +1,55 @@
 auth.onAuthStateChanged(function (user) {
     if (user) {
-        // User is signed in.
-        var displayName = user.displayName;
-        var email = user.email;
-        var emailVerified = user.emailVerified;
-        var photoURL = user.photoURL;
-        var isAnonymous = user.isAnonymous;
-        var uid = user.uid;
-        var providerData = user.providerData;
-        var userdata = db
-            .collection("user")
-            .doc(user.uid)
-            .onSnapshot(doc => {
-                document.getElementById("a1").innerHTML =
-                    "Hi, " + doc.data().Name;
-                document.getElementById("title").innerHTML =
-                    "Welcome, " + doc.data().Name;
-            });
-        var changebtn = document.getElementById("btn");
-        var name = document.getElementById("name");
-        changebtn.addEventListener("click", (e) => {
-            db.collection("user").doc(user.uid).update({
-                Name: name.value,
-            });
-        });
+        if (user != null) {
+            var user = auth.currentUser;
+            var name, email, photoUrl, uid, emailVerified;
+            name = user.displayName;
+            email = user.email;
+            photoUrl = user.photoURL;
+            emailVerified = user.emailVerified;
+            uid = user.uid;
+            if (emailVerified == true) {
+                var username = document.getElementById("user-name");
+                var useremail = document.getElementById("user-email");
+                username.innerText = name;
+                useremail.innerHTML = email;
+                document.getElementById("email-verified").style.display =
+                    "block";
+            } else {
+                verify();
+            }
+            // var btn = document.getElementById("btn");
+            // var newName = document.getElementById("name");
+            // btn.addEventListener("click", () => {
+            //     user.updateProfile({
+            //         displayName: newName.value,
+            //     })
+            //         .then(() => {
+            //             var a1 = document.getElementById("a1");
+            //             a1.innerHTML = "Welcome " + name;
+            //             console.log("Update Sucessfull");
+            //             location.reload();
+            //         })
+            //         .catch((error) => {
+            //             console.log(error.message);
+            //         });
+            // });
+        }
     } else {
-        // User is not signned in
         window.location = "./index.html";
     }
 });
+// logout
+// const logout = document.getElementById("logout");
+// logout.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     auth.signOut().then(() => {
+//         window.location = "./index.html";
+//     });
+// });
 
-//logout
-const logout = document.getElementById("logout");
-logout.addEventListener("click", (e) => {
-    e.preventDefault();
+var signout = () => {
     auth.signOut().then(() => {
         window.location = "./index.html";
     });
-});
+};

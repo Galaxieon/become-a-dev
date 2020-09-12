@@ -3,13 +3,84 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="wpage.css" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
         <title id="title">Welcome</title>
     </head>
     <body>
-        <h1 id="a1"></h1>
-        <button id="logout">Logout</button>
-        <input type="text" id="name" value="" autocomplete="off">
-        <input type="submit" value="Change" id="btn">
+        <section id="menu">
+            <div class="navigation" id="nav">
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="icon"
+                                ><i class="fas fa-home"></i
+                            ></span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="user()">
+                            <span class="icon"
+                                ><i class="fas fa-user"></i
+                            ></span>
+                            <span class="title">Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"
+                                ><i class="fas fa-user-cog"></i
+                            ></span>
+                            <span class="title">Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="logout()">
+                            <span class="icon"
+                                ><i class="fas fa-sign-out-alt"></i
+                            ></span>
+                            <span class="title">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="toggle" onclick="toggleMenu()" id="toggle"></div>
+        </section>
+        <section class="s1" id="s1">
+            <iframe src="../index.html" frameborder="0"></iframe>
+        </section>
+        <section id="popup">
+            <div class="modal" id="user-profile">
+                <h2>User Profile</h2>
+                <i class="fas fa-user"></i>
+                <h1 id="user-name"></h1>
+                <i class="fas fa-at"></i>
+                <h1 id="user-email"></h1>
+                <i id="email-verified" class="fas fa-user-check" style="display: none;"></i>
+                <button class="no" onclick="user()">Close</button>
+            </div>
+            <div class="modal" id="signout">
+                <h2>Do you Want to Log out?</h2>
+                <button class="yes" onclick="signout()">Yes</button>
+                <button class="no" onclick="logout()">No</button>
+            </div>
+            <div class="modal" id="verify">
+                <h2 id="verify-message">Please Verify Your Mail</h2>
+                <button class="normal" id="send">Send Verication Mail</button>
+                <button class="normal" id="resend">Resend</button>
+                <button class="normal" id="verifed" onclick="location.reload()">Verified</button>
+            </div>
+        </section>
+        <!-- <section id="footer">
+            <h1>Developed By Galaxieon</h1>
+        </section> -->
+        <!-- <input type="text" id="name" value="" autocomplete="off" /> -->
+        <!-- <input type="submit" value="Change" id="btn" /> -->
+        <!-- <button id="logout">Logout</button> -->
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
@@ -32,11 +103,12 @@
             };
             // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
-            //   firebase.analytics();
+            firebase.analytics();
 
             const auth = firebase.auth();
             const db = firebase.firestore();
         </script>
         <script src="./scripts/user.js"></script>
+        <script src="./scripts/wpage.js"></script>
     </body>
 </html>
