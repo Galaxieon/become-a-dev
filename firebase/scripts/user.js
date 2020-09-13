@@ -5,7 +5,7 @@ auth.onAuthStateChanged(function (user) {
             if (user.emailVerified == false) {
                 verify();
             }
-            if (name == null) {
+            if (user.displayName == null) {
                 enterName();
             }
             user.providerData.forEach((profile) => {
