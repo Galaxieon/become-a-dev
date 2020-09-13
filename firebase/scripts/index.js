@@ -9,7 +9,6 @@ var sup = () => {
     signupbtn.style.display = "none";
     loginbtn.style.display = "none"
 };
-
 var sin = () => {
     c2.style.display = "block";
     c1.style.display = "none";

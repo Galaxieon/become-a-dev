@@ -11,6 +11,9 @@
         <title id="title">Welcome</title>
     </head>
     <body>
+        <div class="spinner-wrapper">
+            <div class="spinner"></div>
+        </div>
         <section id="menu">
             <div class="navigation" id="nav">
                 <ul>
@@ -31,11 +34,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <span class="icon"
-                                ><i class="fas fa-user-cog"></i
+                                ><i class="fas fa-tasks"></i
                             ></span>
-                            <span class="title">Settings</span>
+                            <span class="title">Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <span class="icon"
+                                ><i class="far fa-address-book"></i
+                            ></span>
+                            <span class="title">Contact Us</span>
                         </a>
                     </li>
                     <li>
@@ -51,28 +62,45 @@
             <div class="toggle" onclick="toggleMenu()" id="toggle"></div>
         </section>
         <section class="s1" id="s1">
-            <iframe src="../index.html" frameborder="0"></iframe>
+            <iframe src="../becomeadev/home.html" frameborder="0"></iframe>
         </section>
         <section id="popup">
             <div class="modal" id="user-profile">
-                <h2>User Profile</h2>
-                <i class="fas fa-user"></i>
-                <h1 id="user-name"></h1>
-                <i class="fas fa-at"></i>
-                <h1 id="user-email"></h1>
-                <i id="email-verified" class="fas fa-user-check" style="display: none;"></i>
+                <h1>User Profile</h1>
+                <img id="user-photo" src="" alt="User Profile" />
+                <div class="user-information">
+                    <i class="fas fa-user"></i>
+                    <h2 id="user-name"></h2>
+                </div>
+                <!-- <i class="fas fa-pencil-alt"></i> -->
+                <div class="user-information">
+                    <i class="fas fa-at"></i>
+                    <h2 id="user-email"></h2>
+                </div>
+                <!-- <i class="fas fa-pencil-alt"></i> -->
+                <!-- <span id="email-verified">Verified</span> -->
                 <button class="no" onclick="user()">Close</button>
             </div>
             <div class="modal" id="signout">
-                <h2>Do you Want to Log out?</h2>
+                <h1>Do you Want to Log out?</h1>
                 <button class="yes" onclick="signout()">Yes</button>
                 <button class="no" onclick="logout()">No</button>
             </div>
             <div class="modal" id="verify">
-                <h2 id="verify-message">Please Verify Your Mail</h2>
+                <h1 id="verify-message">Please Verify Your Mail</h1>
                 <button class="normal" id="send">Send Verication Mail</button>
                 <button class="normal" id="resend">Resend</button>
-                <button class="normal" id="verifed" onclick="location.reload()">Verified</button>
+                <button class="normal" id="verifed" onclick="location.reload()">
+                    Verified
+                </button>
+            </div>
+            <div class="modal" id="name">
+                <h2 id="name-message">Enter Your Name</h2>
+                <input type="text" id="createName" placeholder="Your Name" />
+                <button id="update" class="normal">Update</button>
+                <button class="no" id="close" onclick="location.reload()">
+                    Close
+                </button>
             </div>
         </section>
         <!-- <section id="footer">
