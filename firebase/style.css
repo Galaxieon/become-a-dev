@@ -57,7 +57,8 @@ input {
         transform: rotate(360deg);
     }
 }
-#signin, #resendlink {
+#signin,
+#resendlink {
     display: none;
 }
 .container {
@@ -186,10 +187,10 @@ a {
 }
 
 .error {
-    visibility: hidden;
-    width: 300px;
+    display: none;
+    max-width: 300px;
     height: auto;
-    margin-left: 125px;
+    margin-left: 175px;
     margin-top: 25px;
     padding: 10px;
     background-color: #f44336;
@@ -335,14 +336,14 @@ a {
 }
 
 @media (max-width: 870px) {
-    .recovery{
+    .recovery {
         height: 100vh;
         overflow: hidden;
     }
     .recovery-panel {
         height: 300px;
     }
-.forms-container.recovery-container {
+    .forms-container.recovery-container {
         height: 560px;
     }
     .recovery-form {
@@ -448,6 +449,9 @@ a {
         top: 5%;
         transform: translate(-50%, 0);
     }
+    .error {
+        margin-left: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -456,14 +460,14 @@ a {
     }
 }
 @media (max-width: 570px) {
-    .recovery{
+    .recovery {
         height: 100vh;
         overflow: hidden;
     }
     .recovery-panel {
         height: 300px;
     }
-.forms-container.recovery-container {
+    .forms-container.recovery-container {
         height: 560px;
     }
     .recovery-form {
@@ -493,18 +497,18 @@ a {
         left: 50%;
     }
     .error {
-        margin-left: 100px;
+        margin-left: 120px;
     }
 }
 @media (max-width: 375px) {
-    .recovery{
+    .recovery {
         height: 100vh;
         overflow: hidden;
     }
     .recovery-panel {
         height: 300px;
     }
-.forms-container.recovery-container {
+    .forms-container.recovery-container {
         height: 560px;
     }
     .recovery-form {
@@ -517,16 +521,19 @@ a {
         padding: 0;
         width: 325px;
     }
+    .error {
+        margin-left: 50px;
+    }
 }
 @media (max-width: 320px) {
-    .recovery{
+    .recovery {
         height: 100vh;
         overflow: hidden;
     }
     .recovery-panel {
         height: 300px;
     }
-.forms-container.recovery-container {
+    .forms-container.recovery-container {
         height: 560px;
     }
     .recovery-form {
@@ -534,10 +541,13 @@ a {
     }
     form {
         padding: 0;
-        margin-right: 75px;
+        /* margin-right: 75px; */
     }
     .input-field {
         padding: 0;
         width: 300px;
+    }
+    .error {
+        margin-left: 10px;
     }
 }

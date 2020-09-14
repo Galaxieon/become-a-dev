@@ -89,7 +89,7 @@ body {
     font-size: 24px;
     color: #fff;
 }
-.toggle.active:before {
+.toggle.active::before {
     content: "\f00d";
 }
 .s1 {
@@ -129,8 +129,8 @@ body {
     color: #00b3ff;
 }
 .modal .yes {
-    margin: 15px;
-    width: 75px;
+    margin: 10px;
+    width: 100px;
     padding: 5px;
     font-size: 20px;
     color: #1eff09;
@@ -145,8 +145,8 @@ body {
     transition: 0.5s ease-in-out;
 }
 .modal .no {
-    margin: 15px;
-    width: 75px;
+    margin: 10px;
+    width: 100px;
     padding: 5px;
     font-size: 20px;
     color: #f44336;
@@ -160,17 +160,28 @@ body {
     color: #fff;
     transition: 0.5s ease-in-out;
 }
+#verfiry {
+    z-index: 2;
+}
+#name {
+    z-index: 1;
+}
 #send {
     width: 250px;
 }
-#close {
+#password {
+    width: 200px;
+}
+#close,
+#profile-close,
+#close-password {
     display: none;
 }
 #email-verified {
     display: none;
 }
 .modal .normal {
-    margin: 15px;
+    margin: 10px;
     width: 100px;
     padding: 5px;
     font-size: 20px;
@@ -230,10 +241,7 @@ body {
     font-size: 1.1rem;
     color: #333;
 }
-.fa-pencil-alt {
-    display: inline;
-}
-#user-photo {
+.profilepic {
     width: 100px;
     height: 100px;
     display: block;
@@ -243,12 +251,12 @@ body {
     background: none;
     outline: none;
     border: none;
+    padding: 10px;
     line-height: 1;
     font-weight: 600;
     font-size: 1.1rem;
     color: #333;
 }
-
 .modal input::placeholder {
     color: #aaa;
     font-weight: 500;

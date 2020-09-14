@@ -21,9 +21,9 @@ signupForm.addEventListener("submit", (e) => {
         .catch(function (error) {
             // Handle Errors here.
             var errorMessage = error.message;
-            document.getElementById("error-sin").style.visibility = "hidden";
-            document.getElementById("error-sup").style.visibility = "visible";
             document.getElementById("error-sup").innerHTML = errorMessage;
+            document.getElementById("error-sin").style.display = "none";
+            document.getElementById("error-sup").style.display = "block";
         });
 });
 
@@ -43,9 +43,9 @@ loginForm.addEventListener("submit", (e) => {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            document.getElementById("error-sup").style.visibility = "hidden";
-            document.getElementById("error-sin").style.visibility = "visible";
             document.getElementById("error-sin").innerHTML = errorMessage;
+            document.getElementById("error-sup").style.display = "none";
+            document.getElementById("error-sin").style.display = "block";
         });
 });
 
@@ -72,12 +72,7 @@ firebase.auth().getRedirectResult().then(function(result) {
         window.location = "./welcome.html";
     }
   }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
     var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
+    alert(errorMessage)
     // ...
   });

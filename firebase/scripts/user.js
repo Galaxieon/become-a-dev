@@ -16,11 +16,6 @@ auth.onAuthStateChanged(function (user) {
                 useremail.innerHTML = profile.email;
                 // document.getElementById("email-verified").style.display =
                 //     "block";
-                if (profile.photoURL != null) {
-                    userphoto.src = profile.photoURL;
-                } else {
-                    userphoto.src = "./img/user.svg";
-                }
             });
         }
     } else {
