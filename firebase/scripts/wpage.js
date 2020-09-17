@@ -170,3 +170,7 @@ var passChange = () => {
         }
     });
 };
+var profile = () => {
+    var modal = document.getElementById("modal");
+    modal.classList.toggle("active");
+};

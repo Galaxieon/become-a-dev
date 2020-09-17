@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GALAXIEON</title>
+        <link rel="stylesheet" href="./home.css" />
+        <script
+            src="https://kit.fontawesome.com/cf89783734.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="title-text">Hi, Username</h1>
+            <img id="vector" src="./img/header.png" alt="" />
+            <img
+                onclick="profile()"
+                id="usericon"
+                src="./img/User Icon.png"
+                alt=""
+            />
+        </header>
+        <main>
+            <div class="container">
+                <div class="card-container">
+                    <h1>Classes</h1>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                </div>
+                <div class="card-container">
+                    <h1>Exercises</h1>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card-container">
+                    <h1>Assesments</h1>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                </div>
+                <div class="card-container">
+                    <h1>Practicals</h1>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                    <h2>......</h2>
+                </div>
+            </div>
+            <div class="modal" id="modal">
+                <h1>Profile</h1>
+                <div class="user-information">
+                    <h4>Name:</h4>
+                    <span>Username</span>
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="user-information">
+                    <h4>Mail:</h4>
+                    <span>Usermail</span>
+                    <i class="fas fa-edit"></i>
+                </div>
+                <button>Change Password</button>
+                <button id="logout-btn">Log Out</button>
+            </div>
+        </main>
+        <script src="./scripts/wpage.js"></script>
+    </body>
+</html>
