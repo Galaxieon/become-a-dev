@@ -13,7 +13,7 @@ header h1 {
     font-family: Poppins;
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
+    font-size: 30px;
     padding: 20px;
     line-height: 60px;
     letter-spacing: 0.01em;
@@ -34,11 +34,59 @@ header h1 {
     top: 50px;
     z-index: 10;
 }
+.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #fff 0%, #04befe 100%);
+    animation: spin 1s infinite linear;
+}
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
 .container {
     margin-top: 75px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
+    transition: 0.5s ease-in-out;
 }
 .card-container {
     width: 400px;
@@ -64,33 +112,34 @@ header h1 {
     text-align: left;
     color: #ffffff;
 }
-.modal {
+.modal-user {
     position: absolute;
-    width: 425px;
+    width: 500px;
     height: 350px;
-    left: 900px;
-    top: 115px;
+    right: 2%;
+    top: 9%;
     background: #ffffff;
     box-shadow: -21px 4px 20px rgba(0, 0, 0, 0.25),
         13px 11px 20px rgba(0, 0, 0, 0.25);
     z-index: 11;
-    transform: translateY(-500px);
+    transform: translateY(-1000px);
+    transition: 0.5s ease-in-out;
 }
-.modal::after {
+.modal-user::after {
     content: " ";
     position: absolute;
     bottom: 100%; /* At the top of the tooltip */
-    left: 370px;
+    right: 8%;
     margin-left: -5px;
     border-width: 10px;
     border-style: solid;
     border-color: transparent transparent #fff transparent;
 }
-.modal.active {
+.modal-user.active {
     transform: translateY(0px);
     transition: 0.5s ease-in-out;
 }
-.modal h1 {
+.modal-user h1 {
     padding: 0px 0px 0px 25px;
     margin: 25px 0px;
     font-family: Poppins;
@@ -102,12 +151,96 @@ header h1 {
     background: #e9e9e9;
     border-radius: 50px 0px 0px 50px;
 }
+.modal {
+    position: absolute;
+    width: 500px;
+    padding: 20px;
+    left: 35%;
+    top: 20%;
+    background: #ffffff;
+    box-shadow: -21px 4px 20px rgba(0, 0, 0, 0.25),
+        13px 11px 20px rgba(0, 0, 0, 0.25);
+    z-index: 11;
+    transform: translateY(-2000px);
+    transition: 0.5s ease-in-out;
+}
+.modal h1,
+.modal h2 {
+    margin: 10px 0;
+    color: #00b3ff;
+}
+.modal button {
+    margin: 25px;
+    width: 100px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #2271ff;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+}
+.modal button:hover {
+    background-color: #1855c7;
+}
+.modal .user-information {
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+.modal .user-information i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+.modal .user-information h2 {
+    display: inline;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 20px 0;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+.modal input {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+.modal input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+.modal.active {
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+#send {
+    width: 200px;
+}
 .user-information {
     margin: 25px 0px;
     padding-left: 20px;
     width: 400px;
     display: grid;
-    grid-template-columns: 100px 250px 50px;
+    grid-template-columns: 75px 375px 50px;
 }
 .user-information h4 {
     font-family: Poppins;
@@ -132,7 +265,7 @@ header h1 {
     line-height: 37px;
     color: #11b8ff;
 }
-.modal button {
+.modal-user button {
     margin-left: 20px;
     width: 200px;
     background: #11b8ff;
@@ -144,10 +277,10 @@ header h1 {
     font-size: 15px;
     line-height: 37px;
     color: #ffffff;
-}
-.modal button:hover {
-    background: #09adf3;
     transition: 0.2s ease-in-out;
+}
+.modal-user button:hover {
+    background: #09adf3;
 }
 #logout-btn {
     margin: 10px 0;
@@ -160,4 +293,85 @@ header h1 {
     text-align: center;
     color: #11b8ff;
     background: none;
+}
+.edit-info {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(2000px);
+    display: none;
+}
+.edit-info .container {
+    margin: 0;
+    width: 400px;
+    height: 500px;
+    padding: 10px;
+    background-color: #17d0e9;
+    display: block;
+}
+.edit-info .container h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+.edit-info .container .input-field {
+    background-color: #2e2f3014;
+    width: 300px;
+    height: 50px;
+    margin: 10px 0 50px 30px;
+    display: grid;
+    grid-template-columns: 50px 250px;
+    grid-template-rows: 50px;
+    border-radius: 10px;
+}
+.input-field input,
+.input-field input::placeholder {
+    background: none;
+    outline: none;
+    border: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2f2e41;
+}
+.input-field i {
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    color: #2f2e41;
+}
+.edit-info button {
+    background: #2271ff;
+    border-radius: 50px;
+    width: 150px;
+    margin: 10px 0 0 10px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.2s ease-in-out;
+}
+.edit-info button:hover {
+    background: #1855c7;
+}
+#profile-close,
+#close-password {
+    display: none;
+}
+.container.active {
+    transform: translateX(-2000px);
+    transition: 0.5s ease-in-out;
+}
+@media (max-width: 1024px) {
+    .modal-user {
+        right: 2.5%;
+    }
 }

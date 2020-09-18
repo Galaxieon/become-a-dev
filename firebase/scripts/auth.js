@@ -15,7 +15,7 @@ signupForm.addEventListener("submit", (e) => {
     //signup the user
     auth.createUserWithEmailAndPassword(email, password)
         .then(() => {
-            window.location = "./welcome.html";
+            window.location = "./home.html";
             signupForm.reset();
         })
         .catch(function (error) {
@@ -36,7 +36,7 @@ loginForm.addEventListener("submit", (e) => {
 
     auth.signInWithEmailAndPassword(email, password)
         .then((cred) => {
-            window.location = "./welcome.html";
+            window.location = "./home.html";
             loginForm.reset();
         })
         .catch(function (error) {
@@ -55,7 +55,7 @@ var googleLog = () => {
         .auth()
         .signInWithRedirect(provider)
         .then(() => {
-            window.location = "./welcome.html";
+            window.location = "./home.html";
         })
         .catch(function (error) {
             // Handle Errors here.
@@ -69,7 +69,7 @@ firebase.auth().getRedirectResult().then(function(result) {
 
     var user = result.user;
     if (user) {
-        window.location = "./welcome.html";
+        window.location = "./home.html";
     }
   }).catch(function(error) {
     var errorMessage = error.message;

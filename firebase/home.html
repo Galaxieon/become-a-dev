@@ -12,7 +12,7 @@
     </head>
     <body>
         <header>
-            <h1 id="title-text">Hi, Username</h1>
+            <h1>Hi, <span id="title-text"></span></h1>
             <img id="vector" src="./img/header.png" alt="" />
             <img
                 onclick="profile()"
@@ -21,8 +21,67 @@
                 alt=""
             />
         </header>
-        <main>
-            <div class="container">
+        <main onclick="closepop()">
+            <div class="spinner-wrapper">
+                <div class="spinner"></div>
+            </div>
+            <div id="container1" class="container">
+                <div id="edit-info" class="edit-info">
+                    <div class="container">
+                        <h1 id="profile-message">Edit User Info</h1>
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                placeholder="UserName"
+                                id="profile-name"
+                            />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                placeholder="UserEmail"
+                                id="profile-mail"
+                            />
+                        </div>
+                        <button id="profile-update">Update Info</button>
+                        <button id="profile-discard" onclick="closeinfo()">
+                            Discard
+                        </button>
+                        <button id="profile-close" onclick="location.reload()">
+                            close
+                        </button>
+                    </div>
+                </div>
+                <div id="change-pass" class="edit-info">
+                    <div class="container">
+                        <h1 id="password-message">Change Password</h1>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input
+                                type="password"
+                                placeholder="New Password"
+                                id="new-password"
+                            />
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-check"></i>
+                            <input
+                                type="password"
+                                placeholder="Confrim Password"
+                                id="confirm-password"
+                            />
+                        </div>
+                        <button id="update-password">Change</button>
+                        <button id="discard-password" onclick="closepass()">
+                            Discard
+                        </button>
+                        <button id="close-password" onclick="location.reload()">
+                            Close
+                        </button>
+                    </div>
+                </div>
                 <div class="card-container">
                     <h1>Classes</h1>
                     <h2>......</h2>
@@ -38,7 +97,7 @@
                     <h2>......</h2>
                 </div>
             </div>
-            <div class="container">
+            <div id="container2" class="container">
                 <div class="card-container">
                     <h1>Assesments</h1>
                     <h2>......</h2>
@@ -54,22 +113,77 @@
                     <h2>......</h2>
                 </div>
             </div>
-            <div class="modal" id="modal">
+            <div class="modal-user" id="modal">
                 <h1>Profile</h1>
                 <div class="user-information">
                     <h4>Name:</h4>
-                    <span>Username</span>
-                    <i class="fas fa-edit"></i>
+                    <span id="user-name">Username</span>
+                    <i onclick="editinfo()" class="fas fa-edit"></i>
                 </div>
                 <div class="user-information">
                     <h4>Mail:</h4>
-                    <span>Usermail</span>
-                    <i class="fas fa-edit"></i>
+                    <span id="user-email">Usermail</span>
+                    <i onclick="editinfo()" class="fas fa-edit"></i>
                 </div>
-                <button>Change Password</button>
-                <button id="logout-btn">Log Out</button>
+                <button onclick="changepass()">Change Password</button>
+                <button onclick="logout()" id="logout-btn">Log Out</button>
+            </div>
+            <div class="modal" id="signout">
+                <h1>Do you Want to Log out?</h1>
+                <button class="yes" onclick="signout()">Yes</button>
+                <button class="no" onclick="logout()">No</button>
+            </div>
+            <div class="modal" id="verify">
+                <h1 id="verify-message">Please Verify Your Mail</h1>
+                <button id="send">Send Verication Mail</button>
+                <button id="resend">Resend</button>
+                <button id="verifed" onclick="location.reload()">
+                    Verified
+                </button>
+            </div>
+            <div class="modal" id="name">
+                <h2 id="name-message">Enter Your Name</h2>
+                <div class="user-information">
+                    <i class="fas fa-user"></i>
+                    <input
+                        type="text"
+                        id="createName"
+                        placeholder="Your Name"
+                        required
+                    />
+                </div>
+                <button id="update">Update</button>
+                <button id="close" onclick="location.reload()">Close</button>
             </div>
         </main>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDtiAyS2MI8QROyBMTgRiVsWVTUUgW0Qc4",
+                authDomain: "galaxieon-project001.firebaseapp.com",
+                databaseURL: "https://galaxieon-project001.firebaseio.com",
+                projectId: "galaxieon-project001",
+                storageBucket: "galaxieon-project001.appspot.com",
+                messagingSenderId: "467749679969",
+                appId: "1:467749679969:web:a1d10c1920993ad7f58b20",
+                measurementId: "G-VGQGHZSL33",
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+        </script>
+        <script src="./scripts/user.js"></script>
         <script src="./scripts/wpage.js"></script>
     </body>
 </html>
