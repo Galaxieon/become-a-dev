@@ -13,7 +13,6 @@ auth.onAuthStateChanged(function (user) {
                 var useremail = document.getElementById("user-email");
                 var titletext = document.getElementById("title-text");
                 username.innerHTML = profile.displayName;
-                titletext.innerHTML = profile.displayName;
                 useremail.innerHTML = profile.email;
                 // document.getElementById("email-verified").style.display =
                 //     "block";

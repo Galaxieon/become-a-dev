@@ -211,3 +211,134 @@ var logout = () => {
     var signout = document.getElementById("signout");
     signout.classList.toggle("active");
 };
+//chapter1 data reteivel english
+db.collection("chapters12eng")
+    .doc("1")
+    .get()
+    .then((doc) => {
+        var cname = document.getElementById("c1name");
+        var ename = document.getElementById("e1name");
+        var e1 = document.getElementById("e1");
+        let li = document.createElement("li");
+        let loc = document.createElement("a");
+        loc.setAttribute("href", doc.data().Location);
+        cname.innerHTML = doc.data().Name;
+        ename.innerHTML = doc.data().Name;
+        li.setAttribute("data-id", doc.id);
+        loc.textContent = doc.data().Exeresies;
+        li.appendChild(loc);
+        e1.appendChild(li);
+    })
+    .catch((error) => {
+        var cname = document.getElementById("c1name");
+        cname.innerHTML = error.message;
+    });
+
+db.collection("chapters12eng")
+    .doc("1")
+    .collection("topics")
+    .get()
+    .then((snap) => {
+        snap.forEach((doc) => {
+            disptc1(doc);
+        });
+    })
+    .catch((error) => {
+        console.log(error.message);
+    });
+var disptc1 = (doc) => {
+    var list = document.getElementById("c1");
+    let li = document.createElement("li");
+    let name = document.createElement("a");
+
+    li.setAttribute("data-id", doc.id);
+    name.textContent = doc.data().Name;
+    name.setAttribute("herf", doc.data().Location);
+    li.appendChild(name);
+
+    list.appendChild(li);
+};
+//chapter 2 data retrievel english
+db.collection("chapters12eng")
+    .doc("2")
+    .get()
+    .then((doc) => {
+        var cname = document.getElementById("c2name");
+        var ename = document.getElementById("e2name");
+        var e1 = document.getElementById("e2");
+        let li = document.createElement("li");
+        let loc = document.createElement("a");
+        loc.setAttribute("href", doc.data().Location);
+        cname.innerHTML = doc.data().Name;
+        ename.innerHTML = doc.data().Name;
+        li.setAttribute("data-id", doc.id);
+        loc.textContent = doc.data().Exercises;
+        li.appendChild(loc);
+        e1.appendChild(li);
+    })
+    .catch((error) => {
+        var cname = document.getElementById("c2name");
+        cname.innerHTML = error.message;
+    });
+
+db.collection("chapters12eng")
+    .doc("2")
+    .collection("topics")
+    .get()
+    .then((snap) => {
+        snap.forEach((doc) => {
+            disptc2(doc);
+        });
+    })
+    .catch((error) => {
+        console.log(error.message);
+    });
+var disptc2 = (doc) => {
+    var list = document.getElementById("c2");
+    let li = document.createElement("li");
+    let name = document.createElement("a");
+
+    li.setAttribute("data-id", doc.id);
+    name.textContent = doc.data().Name;
+    name.setAttribute("href", doc.data().Location);
+    li.appendChild(name);
+
+    list.appendChild(li);
+};
+// chapter 3 data retrivel
+db.collection("chapters12eng")
+    .doc("3")
+    .get()
+    .then((doc) => {
+        var cname = document.getElementById("c3name");
+        cname.innerHTML = doc.data().Name;
+    })
+    .catch((error) => {
+        var cname = document.getElementById("c3name");
+        cname.innerHTML = error.message;
+    });
+
+db.collection("chapters12eng")
+    .doc("3")
+    .collection("topics")
+    .get()
+    .then((snap) => {
+        snap.forEach((doc) => {
+            disptc3(doc);
+        });
+    })
+    .catch((error) => {
+        console.log(error.message);
+    });
+var disptc3 = (doc) => {
+    var list = document.getElementById("c3");
+    let li = document.createElement("li");
+    let name = document.createElement("a");
+
+    li.setAttribute("data-id", doc.id);
+    name.textContent = doc.data().Name;
+    name.setAttribute("href", doc.data().Location);
+    li.appendChild(name);
+
+    list.appendChild(li);
+};

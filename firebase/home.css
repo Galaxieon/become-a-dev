@@ -3,22 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", "Manjari", sans-serif;
 }
 body {
-    min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
-header h1 {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 30px;
-    padding: 20px;
-    line-height: 60px;
-    letter-spacing: 0.01em;
-
-    color: #17d0e9;
+#logo {
+    margin-left: 20px;
+    width: 125px;
+    height: 125px;
 }
 #vector {
     max-width: 600px;
@@ -33,6 +27,13 @@ header h1 {
     right: 50px;
     top: 50px;
     z-index: 10;
+}
+#usericon1 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    z-index: 10;
+    display: none;
 }
 .spinner-wrapper {
     width: 100%;
@@ -83,6 +84,7 @@ header h1 {
 }
 .container {
     margin-top: 75px;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -90,8 +92,11 @@ header h1 {
 }
 .card-container {
     width: 400px;
-    height: 500px;
+    height: auto;
     background: #17d0e9;
+    transition: 0.5s ease-in-out;
+}
+.card-container:hover {
     box-shadow: 20px 10px 25px rgba(52, 52, 52, 0.25);
 }
 .card-container h1 {
@@ -104,20 +109,27 @@ header h1 {
     text-align: center;
     color: #ffffff;
 }
-.card-container h2 {
+.card-container ul {
     margin: 20px;
     padding: 10px;
     background: rgba(46, 47, 48, 0.14);
     border-radius: 10px;
     text-align: left;
     color: #ffffff;
+    list-style: none;
+}
+.card-container ul a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
 }
 .modal-user {
     position: absolute;
+    padding: 10px;
     width: 500px;
     height: 350px;
-    right: 2%;
-    top: 9%;
+    right: 2.4%;
+    top: 12.5%;
     background: #ffffff;
     box-shadow: -21px 4px 20px rgba(0, 0, 0, 0.25),
         13px 11px 20px rgba(0, 0, 0, 0.25);
@@ -192,7 +204,6 @@ header h1 {
     border-radius: 55px;
     display: grid;
     grid-template-columns: 15% 85%;
-    padding: 0 0.4rem;
     position: relative;
 }
 .modal .user-information i {
@@ -237,10 +248,10 @@ header h1 {
 }
 .user-information {
     margin: 25px 0px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     width: 400px;
     display: grid;
-    grid-template-columns: 75px 375px 50px;
+    grid-template-columns: 75px 275px 50px;
 }
 .user-information h4 {
     font-family: Poppins;
@@ -300,7 +311,7 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(2000px);
+    transform: translateX(-3000px);
     display: none;
 }
 .edit-info .container {
@@ -367,11 +378,40 @@ header h1 {
     display: none;
 }
 .container.active {
-    transform: translateX(-2000px);
+    transform: translateX(3000px);
     transition: 0.5s ease-in-out;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
     .modal-user {
-        right: 2.5%;
+        top: 12.5%;
+        right: 2.4%;
+    }
+}
+@media (max-width: 820px) {
+    .modal-user {
+        top: 8.5%;
+    }
+    #vector {
+        display: none;
+    }
+    #usericon {
+        display: none;
+    }
+    #usericon1 {
+        display: inline;
+    }
+    .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .card-container {
+        margin: 25px 0;
+    }
+}
+@media (max-width: 756px) {
+    .modal-user {
+        top: 6%;
+        right: 2.4%;
     }
 }

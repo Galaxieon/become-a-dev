@@ -1,83 +1,6 @@
-* {
-    font-family: "Montserrat", "Manjari";
-    outline: none;
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-    scroll-behavior: smooth;
-}
 
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100vh;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.nav ul li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.nav ul li a.active {
-    background-color: #00b3ff;
-    color: white;
-}
-
-.nav ul li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-
-main {
-    margin-left: 15%;
-    margin-right: 15%;
-    padding: 1px 16px;
-}
-.ad {
-    margin: 0;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    position: fixed;
-    right: 0;
-    height: 100%;
-    overflow: auto;
-}
-h1 {
-    text-align: center;
-}
-.btn {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px 0;
-}
-.btn a {
-    width: 150px;
-    text-align: center;
-    padding: 12px;
-    height: 50px;
-    border: 2px solid #00b3ff;
-    background-color: #fff;
-    font-size: 20px;
-    color: #00b3ff;
-    text-decoration: none;
-}
-
-.btn a:hover {
-    color: #fff;
-    background-color: #00b3ff;
-    transition: 0.25s ease-in-out;
-}
 .intro {
+    min-height: autopx;
     background-color: #00b3ff86;
     border-top: 3px solid #00b3ff;
     border-bottom: 3px solid #00b3ff;
@@ -172,20 +95,6 @@ footer span a {
     transition: 0.5s ease-in-out;
 }
 @media screen and (max-width: 768px) {
-    main {
-        margin-left: 10%;
-        margin-right: 10%;
-        padding: 1px 8px;
-    }
-    h1 {
-        font-size: 25px;
-    }
-    h2 {
-        font-size: 20px;
-    }
-    h3 {
-        font-size: 15px;
-    }
     .description p {
         font-size: 15px;
         line-height: 30px;
@@ -209,11 +118,6 @@ footer span a {
     }
 }
 @media screen and (max-width: 375px) {
-    main {
-        margin-left: 5%;
-        margin-right: 5%;
-        padding: 0;
-    }
     th,
     td {
         padding: 10px;
