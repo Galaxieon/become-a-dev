@@ -52,19 +52,6 @@ var enterName = () => {
             });
     });
 };
-var edit = () => {
-    var blur = document.getElementById("s1");
-    blur.classList.toggle("active");
-    var editProfile = document.getElementById("edit-profile");
-    editProfile.classList.toggle("active");
-};
-
-var passChange = () => {
-    var blur = document.getElementById("s1");
-    blur.classList.toggle("active");
-    var changePassword = document.getElementById("change-password");
-    changePassword.classList.toggle("active");
-};
 var modal = document.getElementById("modal");
 var profile = () => {
     modal.classList.toggle("active");
@@ -73,17 +60,8 @@ var closepop = () => {
     modal.classList.remove("active");
 };
 var editinfo = () => {
-    var container1 = document.getElementById("container1");
-    var container2 = document.getElementById("container2");
     var editinfo = document.getElementById("edit-info");
-    var card = document.querySelectorAll(".card-container");
-    editinfo.style.display = "flex";
-    container1.classList.toggle("active");
-    container2.classList.toggle("active");
-    card[0].style.display = "none";
-    card[1].style.display = "none";
-    card[2].style.display = "none";
-    card[3].style.display = "none";
+    editinfo.classList.toggle("active");
     var profileMessage = document.getElementById("profile-message");
     var profileName = document.getElementById("profile-name");
     var profileMail = document.getElementById("profile-mail");
@@ -122,31 +100,9 @@ var editinfo = () => {
             });
     });
 };
-var closeinfo = () => {
-    var container1 = document.getElementById("container1");
-    var container2 = document.getElementById("container2");
-    var editinfo = document.getElementById("edit-info");
-    var card = document.querySelectorAll(".card-container");
-    editinfo.style.display = "none";
-    container1.classList.remove("active");
-    container2.classList.remove("active");
-    card[0].style.display = "block";
-    card[1].style.display = "block";
-    card[2].style.display = "block";
-    card[3].style.display = "block";
-};
 var changepass = () => {
-    var container1 = document.getElementById("container1");
-    var container2 = document.getElementById("container2");
     var changepass = document.getElementById("change-pass");
-    var card = document.querySelectorAll(".card-container");
-    changepass.style.display = "flex";
-    container1.classList.toggle("active");
-    container2.classList.toggle("active");
-    card[0].style.display = "none";
-    card[1].style.display = "none";
-    card[2].style.display = "none";
-    card[3].style.display = "none";
+    changepass.classList.toggle("active");
     var passwordMessage = document.getElementById("password-message");
     var newPassword = document.getElementById("new-password");
     var confirmPassword = document.getElementById("confirm-password");
@@ -193,19 +149,6 @@ var changepass = () => {
             passwordMessage.style.color = "#f44336";
         }
     });
-};
-var closepass = () => {
-    var container1 = document.getElementById("container1");
-    var container2 = document.getElementById("container2");
-    var changepass = document.getElementById("change-pass");
-    var card = document.querySelectorAll(".card-container");
-    changepass.style.display = "none";
-    container1.classList.remove("active");
-    container2.classList.remove("active");
-    card[0].style.display = "block";
-    card[1].style.display = "block";
-    card[2].style.display = "block";
-    card[3].style.display = "block";
 };
 var logout = () => {
     var signout = document.getElementById("signout");
@@ -341,4 +284,17 @@ var disptc3 = (doc) => {
     li.appendChild(name);
 
     list.appendChild(li);
+};
+var deleteac = () => {
+    var deleteac = document.getElementById("delete");
+    deleteac.classList.toggle("active");
+    var user = auth.currentUser;
+    var message = document.getElementById("delete-message");
+    user.delete()
+        .then(function () {
+            message.innerHTML = "Your Account Delete Sucess Fully";
+        })
+        .catch(function (error) {
+            message.innerHTML = error.message;
+        });
 };

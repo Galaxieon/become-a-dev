@@ -37,7 +37,7 @@ body {
 }
 .spinner-wrapper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -85,10 +85,14 @@ body {
 .container {
     margin-top: 75px;
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     transition: 0.5s ease-in-out;
+}
+#container2 {
+    display: none;
 }
 .card-container {
     width: 400px;
@@ -127,9 +131,9 @@ body {
     position: absolute;
     padding: 10px;
     width: 500px;
-    height: 350px;
+    height: auto;
     right: 2.4%;
-    top: 12.5%;
+    top: 12%;
     background: #ffffff;
     box-shadow: -21px 4px 20px rgba(0, 0, 0, 0.25),
         13px 11px 20px rgba(0, 0, 0, 0.25);
@@ -163,25 +167,27 @@ body {
     background: #e9e9e9;
     border-radius: 50px 0px 0px 50px;
 }
-.modal {
-    position: absolute;
-    width: 500px;
-    padding: 20px;
-    left: 35%;
-    top: 20%;
-    background: #ffffff;
-    box-shadow: -21px 4px 20px rgba(0, 0, 0, 0.25),
-        13px 11px 20px rgba(0, 0, 0, 0.25);
+.pop {
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
     z-index: 11;
-    transform: translateY(-2000px);
-    transition: 0.5s ease-in-out;
 }
-.modal h1,
-.modal h2 {
+.pop h1,
+.pop h2 {
     margin: 10px 0;
     color: #00b3ff;
+    word-break: break-word;
 }
-.modal button {
+.pop button {
     margin: 25px;
     width: 100px;
     padding: 10px;
@@ -193,10 +199,10 @@ body {
     border-radius: 10px;
     transition: 0.25s ease-in-out;
 }
-.modal button:hover {
+.pop button:hover {
     background-color: #1855c7;
 }
-.modal .user-information {
+.pop .user-information {
     width: 100%;
     background-color: #f0f0f0;
     margin: 10px 0;
@@ -206,14 +212,14 @@ body {
     grid-template-columns: 15% 85%;
     position: relative;
 }
-.modal .user-information i {
+.pop .user-information i {
     text-align: center;
     line-height: 55px;
     color: #acacac;
     transition: 0.5s;
     font-size: 1.1rem;
 }
-.modal .user-information h2 {
+.pop .user-information h2 {
     display: inline;
     background: none;
     outline: none;
@@ -224,7 +230,7 @@ body {
     font-size: 1.1rem;
     color: #333;
 }
-.modal input {
+.pop input {
     background: none;
     outline: none;
     border: none;
@@ -234,24 +240,28 @@ body {
     font-size: 1.1rem;
     color: #333;
 }
-.modal input::placeholder {
+.pop input::placeholder {
     color: #aaa;
     font-weight: 500;
 }
-.modal.active {
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
+.pop.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }
 #send {
     width: 200px;
 }
+#resend {
+    display: none;
+}
 .user-information {
     margin: 25px 0px;
     /* padding-left: 20px; */
-    width: 400px;
+    width: 500px;
     display: grid;
-    grid-template-columns: 75px 275px 50px;
+    grid-template-columns: 15% 75% 10%;
 }
 .user-information h4 {
     font-family: Poppins;
@@ -305,39 +315,22 @@ body {
     color: #11b8ff;
     background: none;
 }
-.edit-info {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-3000px);
-    display: none;
-}
-.edit-info .container {
-    margin: 0;
-    width: 400px;
-    height: 500px;
-    padding: 10px;
-    background-color: #17d0e9;
-    display: block;
-}
-.edit-info .container h1 {
+.edit-info h1 {
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 60px;
     text-align: center;
-    color: #ffffff;
+    color: #17d0e9;
 }
-.edit-info .container .input-field {
+.edit-info .input-field {
     background-color: #2e2f3014;
-    width: 300px;
+    width: 500px;
     height: 50px;
-    margin: 10px 0 50px 30px;
+    margin: 10px 0;
     display: grid;
-    grid-template-columns: 50px 250px;
+    grid-template-columns: 50px 450px;
     grid-template-rows: 50px;
     border-radius: 10px;
 }
@@ -377,19 +370,14 @@ body {
 #close-password {
     display: none;
 }
-.container.active {
-    transform: translateX(3000px);
-    transition: 0.5s ease-in-out;
-}
 @media (min-width: 1024px) {
     .modal-user {
-        top: 12.5%;
         right: 2.4%;
     }
 }
 @media (max-width: 820px) {
     .modal-user {
-        top: 8.5%;
+        right: 3%;
     }
     #vector {
         display: none;
@@ -409,9 +397,110 @@ body {
         margin: 25px 0;
     }
 }
+@media (max-width: 800px) {
+    .modal-user {
+        right: 3.2%;
+    }
+}
 @media (max-width: 756px) {
     .modal-user {
-        top: 6%;
-        right: 2.4%;
+        top: 8.5%;
+        right: 3.5%;
+    }
+}
+@media (max-width: 600px) {
+    .pop {
+        width: 500px;
+    }
+    .edit-info .input-field {
+        width: 400px;
+        grid-template-columns: 50px 350px;
+    }
+}
+@media (max-width: 530px) {
+    .modal-user {
+        width: 450px;
+        right: 5.5%;
+    }
+    .user-information {
+        width: 450px;
+    }
+    .pop {
+        width: 400px;
+    }
+    .edit-info .input-field {
+        width: 300px;
+        grid-template-columns: 50px 250px;
+    }
+}
+@media (max-width: 480px) {
+    .modal-user {
+        width: 400px;
+        right: 7%;
+    }
+    .user-information {
+        width: 400px;
+    }
+    .user-information span {
+        word-wrap: break-word;
+    }
+}
+@media (max-width: 450px) {
+    .modal-user {
+        width: 300px;
+        right: 9%;
+    }
+    .user-information {
+        width: 300px;
+        grid-template-columns: 55px 215px 30px;
+    }
+    .user-information h4 {
+        font-size: 16px;
+    }
+    .user-information span {
+        display: inline-block;
+        height: 100px;
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+    .pop {
+        width: 300px;
+        padding: 25px;
+    }
+    .edit-info .input-field {
+        width: 250px;
+        grid-template-columns: 50px 200px;
+    }
+    .input-field input,
+    .input-field input::placeholder {
+        font-size: 18px;
+    }
+    .input-field i {
+        font-size: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .modal-user {
+        top: 7.5%;
+        right: 10%;
+    }
+    .card-container {
+        width: 300px;
+    }
+    .edit-info .container {
+        width: 300px;
+    }
+    .edit-info .container .input-field {
+        width: 280px;
+        margin: 10px 0;
+        grid-template-columns: 50px 230px;
+    }
+}
+@media (max-width: 340px) {
+    #usericon1 {
+        right: 15px;
+    }
+    .modal-user {
+        right: 2%;
     }
 }

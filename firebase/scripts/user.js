@@ -11,7 +11,6 @@ auth.onAuthStateChanged(function (user) {
             user.providerData.forEach((profile) => {
                 var username = document.getElementById("user-name");
                 var useremail = document.getElementById("user-email");
-                var titletext = document.getElementById("title-text");
                 username.innerHTML = profile.displayName;
                 useremail.innerHTML = profile.email;
                 // document.getElementById("email-verified").style.display =

@@ -31,63 +31,110 @@
             <div class="spinner-wrapper">
                 <div class="spinner"></div>
             </div>
+            <div class="modal-user" id="modal">
+                <h1>Profile</h1>
+                <div class="user-information">
+                    <h4>Name:</h4>
+                    <span id="user-name">Username</span>
+                    <i onclick="editinfo()" class="fas fa-edit"></i>
+                </div>
+                <div class="user-information">
+                    <h4>Mail:</h4>
+                    <span id="user-email">Usermail</span>
+                    <i onclick="editinfo()" class="fas fa-edit"></i>
+                </div>
+                <button onclick="changepass()">Change Password</button>
+                <button onclick="deleteac()">Delete Account</button>
+                <button onclick="logout()" id="logout-btn">Log Out</button>
+            </div>
+            <div class="pop" id="signout">
+                <h1>Do you Want to Log out?</h1>
+                <button class="yes" onclick="signout()">Yes</button>
+                <button class="no" onclick="logout()">No</button>
+            </div>
+            <div class="pop" id="verify">
+                <h1 id="verify-message">Please Verify Your Mail</h1>
+                <button id="send">Send Verication Mail</button>
+                <button id="resend">Resend</button>
+                <button id="verifed" onclick="location.reload()">
+                    Verified
+                </button>
+            </div>
+            <div class="pop" id="name">
+                <h2 id="name-message">Enter Your Name</h2>
+                <div class="user-information">
+                    <i class="fas fa-user"></i>
+                    <input
+                        type="text"
+                        id="createName"
+                        placeholder="Your Name"
+                        required
+                    />
+                </div>
+                <button id="update">Update</button>
+                <button id="close" onclick="location.reload()">Close</button>
+            </div>
+            <div id="edit-info" class="pop">
+                <div class="edit-info">
+                    <h1 id="profile-message">Edit User Info</h1>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input
+                            type="text"
+                            placeholder="UserName"
+                            id="profile-name"
+                        />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input
+                            type="email"
+                            placeholder="UserEmail"
+                            id="profile-mail"
+                        />
+                    </div>
+                    <button id="profile-update">Update Info</button>
+                    <button id="profile-discard" onclick="editinfo()">
+                        Discard
+                    </button>
+                    <button id="profile-close" onclick="location.reload()">
+                        close
+                    </button>
+                </div>
+            </div>
+            <div id="change-pass" class="pop">
+                <div class="edit-info">
+                    <h1 id="password-message">Change Password</h1>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input
+                            type="password"
+                            placeholder="New Password"
+                            id="new-password"
+                        />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-check"></i>
+                        <input
+                            type="password"
+                            placeholder="Confrim Password"
+                            id="confirm-password"
+                        />
+                    </div>
+                    <button id="update-password">Change</button>
+                    <button id="discard-password" onclick="changepass()">
+                        Discard
+                    </button>
+                    <button id="close-password" onclick="location.reload()">
+                        Close
+                    </button>
+                </div>
+            </div>
+            <div id="delete" class="pop">
+                <h1 id="delete-message"></h1>
+                <button onclick="deleteac()">Close</button>
+            </div>
             <div id="container1" class="container">
-                <div id="edit-info" class="edit-info">
-                    <div class="container">
-                        <h1 id="profile-message">Edit User Info</h1>
-                        <div class="input-field">
-                            <i class="fas fa-user"></i>
-                            <input
-                                type="text"
-                                placeholder="UserName"
-                                id="profile-name"
-                            />
-                        </div>
-                        <div class="input-field">
-                            <i class="fas fa-envelope"></i>
-                            <input
-                                type="email"
-                                placeholder="UserEmail"
-                                id="profile-mail"
-                            />
-                        </div>
-                        <button id="profile-update">Update Info</button>
-                        <button id="profile-discard" onclick="closeinfo()">
-                            Discard
-                        </button>
-                        <button id="profile-close" onclick="location.reload()">
-                            close
-                        </button>
-                    </div>
-                </div>
-                <div id="change-pass" class="edit-info">
-                    <div class="container">
-                        <h1 id="password-message">Change Password</h1>
-                        <div class="input-field">
-                            <i class="fas fa-lock"></i>
-                            <input
-                                type="password"
-                                placeholder="New Password"
-                                id="new-password"
-                            />
-                        </div>
-                        <div class="input-field">
-                            <i class="fas fa-check"></i>
-                            <input
-                                type="password"
-                                placeholder="Confrim Password"
-                                id="confirm-password"
-                            />
-                        </div>
-                        <button id="update-password">Change</button>
-                        <button id="discard-password" onclick="closepass()">
-                            Discard
-                        </button>
-                        <button id="close-password" onclick="location.reload()">
-                            Close
-                        </button>
-                    </div>
-                </div>
                 <div class="card-container">
                     <h1>Classes</h1>
                     <ul id="c1">
@@ -125,48 +172,6 @@
                     <h2>......</h2>
                     <h2>......</h2>
                 </div>
-            </div>
-            <div class="modal-user" id="modal">
-                <h1>Profile</h1>
-                <div class="user-information">
-                    <h4>Name:</h4>
-                    <span id="user-name">Username</span>
-                    <i onclick="editinfo()" class="fas fa-edit"></i>
-                </div>
-                <div class="user-information">
-                    <h4>Mail:</h4>
-                    <span id="user-email">Usermail</span>
-                    <i onclick="editinfo()" class="fas fa-edit"></i>
-                </div>
-                <button onclick="changepass()">Change Password</button>
-                <button onclick="logout()" id="logout-btn">Log Out</button>
-            </div>
-            <div class="modal" id="signout">
-                <h1>Do you Want to Log out?</h1>
-                <button class="yes" onclick="signout()">Yes</button>
-                <button class="no" onclick="logout()">No</button>
-            </div>
-            <div class="modal" id="verify">
-                <h1 id="verify-message">Please Verify Your Mail</h1>
-                <button id="send">Send Verication Mail</button>
-                <button id="resend">Resend</button>
-                <button id="verifed" onclick="location.reload()">
-                    Verified
-                </button>
-            </div>
-            <div class="modal" id="name">
-                <h2 id="name-message">Enter Your Name</h2>
-                <div class="user-information">
-                    <i class="fas fa-user"></i>
-                    <input
-                        type="text"
-                        id="createName"
-                        placeholder="Your Name"
-                        required
-                    />
-                </div>
-                <button id="update">Update</button>
-                <button id="close" onclick="location.reload()">Close</button>
             </div>
         </main>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
