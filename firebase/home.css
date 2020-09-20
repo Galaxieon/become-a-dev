@@ -422,6 +422,9 @@ body {
         width: 450px;
         right: 5.5%;
     }
+    .modal-user button {
+        margin-top: 20px;
+    }
     .user-information {
         width: 450px;
     }
